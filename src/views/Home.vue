@@ -1,22 +1,22 @@
 <template>
   <div>
-    <div v-if="loading">
+    <!-- <div v-if="loading">
       <PageLoading/>
-    </div>
+    </div> -->
     <transition>
-      <div v-if="api" class="conteudo">
+      <div   class="conteudo">
         <div>
-          <h1>Sobre a {{api.titulo}}</h1>
-          <p>{{api.descricao}}</p>
+          <h1>Sobre a  </h1>
+          <p> </p>
           <router-link class="btn-cursos" tag="button" to="/cursos">Cursos</router-link>
           <div>
             <h2>Avaliações</h2>
-            <ul>
+            <!-- <ul>
               <li v-for="avaliacao in api.avaliacoes" :key="avaliacao.nome">
                 <p>{{avaliacao.nome}}</p>
                 <p>{{avaliacao.descricao}}</p>
               </li>
-            </ul>
+            </ul> -->
           </div>
         </div>
         <img src="@/assets/aprender.png" alt="Aprenda Web Design">
@@ -29,10 +29,9 @@
 import fetchData from "@/mixins/fetchData.js";
 
 export default {
-  name: "home",
-  mixins: [fetchData],
+  
   created() {
-    this.fetchData("/home");
+     
   }
 };
 </script>

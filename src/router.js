@@ -5,7 +5,7 @@ import Contato from './views/Contato.vue'
 import Cursos from './views/Cursos.vue'
 import Curso from './views/Curso.vue'
 import Aula from './views/Aula.vue'
-import Projeto from './views/Projeto.vue'
+import Projetos from './views/Projetos.vue'
 
 Vue.use(Router)
 
@@ -29,9 +29,9 @@ export default new Router({
       component: Cursos
     },
     {
-      path: "/projeto",
-      name: "projeto",
-      component: Projeto
+      path: "/projetos",
+      name: "projetos",
+      component: Projetos
     },
     {
       path: "/cursos/:curso",

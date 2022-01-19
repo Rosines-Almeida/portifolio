@@ -2,18 +2,19 @@
   <header>
     <nav>
       <div class="logo">
-        <router-link to="/">Techno</router-link>
+        <router-link  to="/"><div class="icon-home"></div></router-link>
       </div>
       <ul>
-        <li>
-          <router-link to="/cursos">Cursos</router-link>
+          <li>
+          <router-link to="/projetos">Projetos</router-link>
         </li>
         <li>
-          <router-link to="/contato">Contato</router-link>
+          <router-link to="/cursos">Experiência e Cursos</router-link>
         </li>
         <li>
-          <router-link to="/projeto">Projeto</router-link>
+          <router-link to="/contato">Contatos</router-link>
         </li>
+      
       </ul>
     </nav>
   </header>
@@ -27,28 +28,35 @@ export default {
 
 <style scoped>
 header {
-  background: #234;
+  background: #F9F9F9;
 }
 
 header a {
-  color: white;
+  color: #575454;
 }
 
 a.router-link-active {
-  color: #4b8;
+  color: #6F94A9;
 }
 
 nav {
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 0 auto;
   display: flex;
   align-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 50px;
 }
 
 .logo {
   flex: 1;
+   
+}
+.icon-home{
+  background-image: url('../assets/home.svg');
+     background-repeat: no-repeat;
+     height: 46px;
+     width: 46x; 
 }
 
 .logo a {
