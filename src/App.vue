@@ -20,6 +20,7 @@ body {
   margin: 0px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   color: #234;
+  background-color: #F5F5F5;
 }
 
 ul {
@@ -43,9 +44,10 @@ a.router-link-active {
 }
 
 .container {
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 0 auto;
   padding: 20px;
+  background-color: #F5F5F5;
 }
 
 .v-enter {

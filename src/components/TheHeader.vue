@@ -28,7 +28,7 @@ export default {
 
 <style scoped>
 header {
-  background: #F9F9F9;
+  background: #F5F5F5 ;
 }
 
 header a {
