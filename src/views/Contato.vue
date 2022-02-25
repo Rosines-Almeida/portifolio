@@ -3,26 +3,33 @@
     <div class="contato-imagem">
     <img src="../assets/contato.png" alt="lanpada" width="500" height="600">  
     </div>
-
+ 
+<!-- <div class="contato-links" >
+ <div class="box-contatos" v-for="(contato, index) in contatos" v-bind:key="index">
+        <div class="contato">
+          <i v-bind:class="{{contato.icon}}" > </i>
+          <div><a href={{contato.link}} target="_blank">{{contato.midiaSocial}} </a></div>
+        </div>
+      </div> 
+</div> -->
     <div class="contato-links">
       <div class="box-contatos">
         <div class="contato">
           <i class="icon ic_linkedin"> </i>
-          <div>/rosines-almeida</div>
+          <div><a href="https://www.linkedin.com/in/rosines-almeida/" target="_blank">/rosines-almeida </a></div>
         </div>
-      </div>
-
+      </div> 
       <div class="box-contatos">
         <div class="contato">
           <i class="icon ic_email"> </i>
-          <div>rosines.almeida@gmail.com</div>
+          <div><a href="mailto:rosines.almeida@gmail.com" target="_blank"> rosines.almeida@gmail.com </a></div>
         </div>
       </div>
 
       <div class="box-contatos">
         <div class="contato">
           <i class="icon ic_gitHub"> </i>
-          <div>/rosines-almeida</div>
+         <div><a href="https://github.com/Rosines-Almeida" target="_blank"> /Rosines-Almeida </a> </div>
         </div>
       </div>
     </div>
@@ -45,7 +52,7 @@
 }
 
 img{
-  margin: auto 55px;;
+ margin: 100px 150px;
 }
 
 .contato-links {
@@ -58,6 +65,7 @@ img{
 .contato div {
   font-size: 20px;
   line-height: 60px;
+  font-weight: 100;
 }
 
 .icon{
@@ -74,22 +82,25 @@ img{
 }
 
 .ic_email {
-   background-image: url("../assets/ic_linkedin.png");
+   background-image: url("../assets/ic_email.svg");
 }
 
 .ic_gitHub {
- background-image: url("../assets/ic_linkedin.png");
+ background-image: url("../assets/ic_gitHub.svg");
 }
 </style>
 
 <script>
-import fetchData from "@/mixins/fetchData.js";
+// import fetchData from "@/mixins/fetchData.js";
+import data from "@/mixins/data.js";
 
 export default {
-  name: "contato",
-  mixins: [fetchData],
+  // name: "contato",
+  // mixins: [fetchData],
   created() {
-    this.fetchData("/contato");
+    // this.fetchData("/contato");
+    this.contatos = data.contatos;
+  
   },
 };
 </script>

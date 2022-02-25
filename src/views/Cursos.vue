@@ -1,27 +1,28 @@
 <template>
   <div class="container-rota-curso">
-    <!-- <div v-if="loading">
-      <PageLoading/>
-    </div> -->
     <div class="container-experiencia">
       <p class="title-experiencia">Experiência</p>
 
-      <div class="experiencia">
-        <div class="separator">2021</div>
+      <div
+        class="experiencia mt-3"
+        v-for="(experiencia, index) in experiencias"
+        :key="index"
+      >
+        <div class="separator">{{ experiencia.year }}</div>
         <div class="box-experiencia">
           <div class="box-experiencia-text">
-            Atuo no projeto com melhorias e nova simplemantações atuando com
-            typescriprt, vue, scss, html
+            {{ experiencia.description }}
           </div>
           <div class="box-experiencia-skill">
-            <div>Desenvolvedora Front-end Pleno</div>
+            <div>{{ experiencia.title }}</div>
             <div class="skills">
-              <p class="skill">lig 1</p>
-              <p></p>
-              <p class="skill">lig 2</p>
-              <p></p>
-              <p class="skill">lig 3</p>
-              <p></p>
+              <p
+                v-for="(skill, index) in experiencia.skills"
+                :key="index"
+                class="skill"
+              >
+                {{ skill }}
+              </p>
             </div>
           </div>
         </div>
@@ -29,70 +30,63 @@
     </div>
 
     <div class="container-curso">
-      <p>curso</p>
-
-      <!-- formação e ecurso -->
       <div class="container-formacao">
-        <div class="separator">Formação</div>
-        <div class="experiencia">
-          <div class="box-formacao">
-            <p>Bootcamp</p>
-            <p>Desenvolvimento Front End</p>
-            <p>Laboratória</p>
-          </div>
+        <div class="separator-flex">
+          <div class="description-separator">Formação</div>
+          <div class="after"></div>
         </div>
-
-        <div class="experiencia">
+        <div class="experiencia" v-for="(item, index) in formacao" :key="index">
           <div class="box-formacao">
-            <p>Bootcamp</p>
-            <p>Desenvolvimento Front End</p>
-            <p>Laboratória</p>
+            <p>{{ item.tipo }}</p>
+            <p>{{ item.formacao }}</p>
+            <p>{{ item.instituicao }}</p>
           </div>
         </div>
       </div>
-
-      <!-- certificação -->
 
       <div class="container-formacao">
-        <div class="separator">Certificação</div>
-        <div class="experiencia">
-          <div class="box-formacao">
-            <p>
-              Exam 480: Programming in HTML5 <br />
-              with JavaScript and CSS3 Microsoft
-            </p>
-            <p>Microsoft</p>
-          </div>
+        <div class="separator-flex">
+          <div class="description-separator">Certificação</div>
+          <div class="after"></div>
         </div>
-        <div class="experiencia">
+        <div
+          class="experiencia"
+          v-for="(item, index) in certificacao"
+          :key="index"
+        >
           <div class="box-formacao">
-            <p>Exam 480: Programming i</p>
-            <p>Microsoft</p>
+            <p></p>
+            <p>{{ item.formacao }}</p>
+            <p>{{ item.instituicao }}</p>
           </div>
         </div>
       </div>
-
-      <!-- alguns cursos -->
-
-      <div class="experiencia">
-        <div class="separator">Alguns <br />Cursos</div>
-        <div class="box-alguns-cursos">
-          <div class="box-certificacoes">
-            <div class="curso">React completo</div>
-            <div class="instituicao">Origamid</div>
-            <div class="horas">56 horas</div>
+ 
+      <div class="container-formacao">
+        <div class="separator-flex">
+          <div class="description-separator">
+            Alguns <br />
+            Cursos
           </div>
-          <div class="box-certificacoes">
-            <div class="curso">React completo</div>
-            <div class="instituicao">Origamid</div>
-            <div class="horas">56 horas</div>
+          <div class="after"></div>
+        </div>
+        <div class="alguns-cursos">
+          <div class="box-alguns-cursos">
+            <div
+              class="box-certificacoes"
+              v-for="(curso, index) in cursos"
+              :key="index"
+            >
+              <div :class="curso.formacao" class="curso">{{ curso.formacao }}</div>
+              <div class="instituicao">{{ curso.instituição }}</div>
+              <div class="horas">{{ curso.horas }}</div>
+              <a :href="curso.formacao"></a>
+              
+            </div>
           </div>
         </div>
       </div>
-      <div class="container-curso"></div>
     </div>
-
-    <transition> </transition>
   </div>
 </template>
 
@@ -109,16 +103,21 @@ export default {
 </script>
 
 <style>
+.mt-3 {
+  margin-top: 30px;
+}
+
 .container-rota-curso {
   margin: 0px;
   padding: 0px;
   display: flex;
 }
-/* experiencia */
+ 
 .container-experiencia {
   margin: 0px 100px 0 53px;
   width: 50%;
   min-height: 100vh;
+  padding-left: 40px;
 }
 .experiencia {
   display: flex;
@@ -127,6 +126,9 @@ export default {
 .separator {
   align-self: center;
   color: #131212;
+  width: 91px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .separator::after {
@@ -143,7 +145,7 @@ export default {
   height: auto;
   border-radius: 10px;
   background-color: #ffffff;
-  box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
   padding: 30px;
   flex-wrap: wrap;
 }
@@ -163,16 +165,19 @@ export default {
 .skills {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .skill {
   background-color: #f5f5f5;
   margin: 10px;
-  border-radius: 2px;
+  border-radius: 16px;
   color: #131212;
   width: 100px;
   height: 18px;
   text-align: center;
+  font-size: 15px;
+  padding: 7px 0px 6px;
 }
 
 .title-experiencia {
@@ -182,7 +187,6 @@ export default {
   margin-top: 60 px;
   padding: 16px 55px;
 }
-/* fim experienci */
 
 .container-curso {
   padding: 0px 0px 0 53px;
@@ -190,11 +194,10 @@ export default {
   width: 50%;
 }
 
-/* formaçãoe curso */
 .box-formacao {
   text-align: center;
   padding: 20px 20px;
-  box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 10px 11px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   background-color: #ffffff;
   width: 190px;
@@ -204,8 +207,9 @@ export default {
 p:last-child {
   color: #867c7c;
 }
+
 .certificacoe {
-  box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
   border-radius: 5px;
   padding: 0 15px;
 }
@@ -232,11 +236,53 @@ p:last-child {
   margin-top: 60px;
 }
 
-.box-alguns-cursos{
+.alguns-cursos {
+  display: flex;
+  box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
+}
+
+.box-alguns-cursos {
   background-color: #ffffff;
-      padding: 10px;
-    border-radius: 5px;
-    margin-top: 60px;
-} 
- 
+  padding: 10px;
+  border-radius: 5px;
+  width: 455px;
+}
+
+.separator-flex {
+  display: flex;
+  width: 115px;
+}
+
+.description-separator {
+  align-self: center;
+  color: #ffffff;
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.after {
+  height: 20px;
+  border-right: 4px solid #ffffff;
+  margin: 8px;
+  align-self: center;
+}
+
 </style>
+
+
+<script>
+import data from "@/mixins/data.js";
+
+export default {
+ 
+  created() { 
+    this.experiencias = data.experiencias;
+    this.formacao = data.formacao;
+    this.certificacao = data.certificacao;
+    this.cursos = data.cursos;
+  },
+
+};
+</script>

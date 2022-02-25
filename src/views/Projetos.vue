@@ -5,14 +5,14 @@
         <div class="title">Projetos</div>
         <div class="description">Conheça alguns projetos</div>
         <p>
-          Projetos desenvolvidos em cursos e treinamentos. <br />Veja mais
-          projetos no gitHub
-        </p>
+          Projetos desenvolvidos em cursos e treinamentos. <br> <br>Veja mais
+          projetos no gitHub 
+        </p><div > <i class="icon ic_gitHub"> </i> </div>
       </div>
     </div>
 
     <div class="box-projetos">
-      <div>
+      <div class="box-shadow-projetos">
         <div class="projeto-gift">1</div>
         <div class="projeto-description-box">
           <div class="projeto-link">link: jwkejkwjkj</div>
@@ -24,7 +24,7 @@
         </div>
       </div>
 
-      <div>
+      <div class="box-shadow-projetos">
         <div class="projeto-gift">1</div>
         <div class="projeto-description-box">
           <div class="projeto-link">link: jwkejkwjkj</div>
@@ -38,7 +38,7 @@
     </div>
 
     <div class="box-projetos">
-      <div>
+      <div class="box-shadow-projetos">
         <div class="projeto-gift">1</div>
         <div class="projeto-description-box">
           <div class="projeto-link">link: jwkejkwjkj</div>
@@ -50,7 +50,7 @@
         </div>
       </div>
 
-      <div>
+      <div class="box-shadow-projetos">
         <div class="projeto-gift">1</div>
         <div class="projeto-description-box">
           <div class="projeto-link">link: jwkejkwjkj</div>
@@ -72,19 +72,27 @@
 }
 .projeto-description {
   color: white;
-  padding: 210px 50px;
+  
   text-align: center;
   min-height: 100vh;
+  
+    padding: 100px 50px;
+
+  
 }
 
+.projeto-description p{
+    color: white; 
+  }
+
 .description {
-  font-size: 1.375rem;
+  font-size: 1.6rem;
   margin-top: 25px;
   /* margin-bottom: 40px;; */
 }
 
 .projeto-description p {
-  font-size: 1.12rem;
+  font-size: 1.4rem;
   margin-top: 45px;
 }
 
@@ -96,9 +104,13 @@
 }
 
 .title {
-  /* color: white; */
-  font-weight: bold;
-  font-size: 36px;
+  color: white;
+  font-weight: bold; 
+      
+          font-size: 2.6em; 
+    font-weight: bold;
+    margin-top: 60px;
+    padding: 16px 55px;
 }
 
 .box-projetos {
@@ -115,22 +127,27 @@
   background-color: #e0e0e0;
 }
 
+.box-shadow-projetos{
+    box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
+    height: 422px;
+    border-radius: 0px 0px 6px 6px; 
+}
+
 .projeto-description-box {
   display: flex;
   flex-wrap: wrap;
   height: 70px;
   background-color: white;
-  border-radius: 0px 0px 6px 6px;
-  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0px 0px 6px 6px; 
   width: 352px;
   flex-direction: column;
 }
 
 .projeto-link {
-  margin: auto auto;
-  font-size: 12px;
-  color: #131212;
-  display: inline-block;
+      margin: auto auto;
+    font-size: 16px;
+    color: #131212;
+    display: inline-block;
 }
 
 .projeto-liguagens {
@@ -140,12 +157,46 @@
 }
 
 .liguagen {
-  background-color: #f5f5f5;
-  width: 45px;
-  height: 11px;
-  font-size: 8px;
-  text-align: center;
-  border-radius: 10px;
-  color: #131212;
+background-color: #58C3FF;
+    width: 83px;
+    height: 18px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 7px;
+    color: white; 
 }
+
+.icon{
+  background-repeat: no-repeat;
+  height: 27px;
+  width: 27px;
+  margin: 16px 10px 0px 0px;
+
+}
+
+.ic_gitHub {
+ background-image: url("../assets/ic_gitHub.svg");
+}
+span{
+   font-size: 20px;
+  line-height: 60px;
+  font-weight: 100;
+}
+
+
+
 </style>
+
+<script>
+// import fetchData from "@/mixins/fetchData.js";
+import data from "@/mixins/data.js";
+
+export default {
+  // name: "contato",
+  // mixins: [fetchData],
+  created() {
+    // this.fetchData("/contato");
+    this.experiencias = data.experiencias; 
+  },
+};
+</script>
