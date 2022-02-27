@@ -56,7 +56,7 @@
         >
           <div class="box-formacao">
             <p></p>
-            <p>{{ item.formacao }}</p>
+            <p><a :href="item.link"  target="_blank"> {{ item.formacao }}</a></p>
             <p>{{ item.instituicao }}</p>
           </div>
         </div>
@@ -77,11 +77,12 @@
               v-for="(curso, index) in cursos"
               :key="index"
             >
-              <div :class="curso.formacao" class="curso">{{ curso.formacao }}</div>
-              <div class="instituicao">{{ curso.instituição }}</div>
-              <div class="horas">{{ curso.horas }}</div>
-              <a :href="curso.formacao"></a>
+  
+              <div :class="curso.formacao" class="curso" ><a :href="curso.link"  target="_blank">{{curso.formacao}}</a></div>
+              <div class="instituicao" v-html="curso.instituicao"></div>
+              <div class="horas" v-html="curso.horas"> </div>
               
+              <!-- <hr class="hr"  v-if="cursos.length-1 != index">  -->
             </div>
           </div>
         </div>
@@ -172,7 +173,7 @@ export default {
   background-color: #f5f5f5;
   margin: 10px;
   border-radius: 16px;
-  color: #131212;
+  color: #131212 !important;
   width: 100px;
   height: 18px;
   text-align: center;
@@ -219,11 +220,22 @@ p:last-child {
   text-align: center;
   border-bottom: 1px dashed #bab3b3;
   background-color: #ffffff;
+ 
 }
 
 .box-certificacoes div {
   padding: 10px;
   flex: 1;
+  align-self: center;
+}
+
+ a{
+  font-weight: 100;
+  color: #131212;
+}
+
+.hr{
+    border-bottom: 1px dashed #bab3b3;
 }
 
 .instituicao {
@@ -239,6 +251,7 @@ p:last-child {
 .alguns-cursos {
   display: flex;
   box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
+   margin-bottom: 25px;
 }
 
 .box-alguns-cursos {

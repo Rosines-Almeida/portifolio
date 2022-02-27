@@ -2,16 +2,20 @@
   <div id="app">
     <TheHeader/>
     <router-view class="container"></router-view>
-        <TheHeader/>
+    <!-- todo coolocar o rodape aqui  -->
+        <Rodape/>
   </div>
 </template>
 
 <script>
 import TheHeader from "@/components/TheHeader.vue";
+import Rodape from "@/components/Rodape.vue"
+ 
 
 export default {
   components: {
-    TheHeader
+    TheHeader,
+    Rodape
   }
 };
 </script>
