@@ -1,27 +1,28 @@
 <template>
-    <nav>
+    <footer>
       <ul v-for="(contato, index) in contatos"
         v-bind:key="index" class="contato-links"> 
           <li class="contato">  
              <i :class="contato.icon"> <a :href="contato.link" target="_blank"></a> </i>
         </li> 
       </ul>
-    </nav>
+    </footer>
 </template>
 
 <script>
 export default {
-  name: "Rodape"
+  name: "Footer"
 };
 </script>
 
 <style scoped> 
 
-nav { 
+footer { 
   margin: 0 auto;
   display: flex;
   justify-content: end;
-  padding: 20px 111px;
+  padding: 10px 111px;  
+  background-color: #575454;
 } 
 
 ul li {
@@ -34,22 +35,22 @@ li a {
 }
 
 .icon {
-  background-repeat: no-repeat;
-  height: 27px;
-  width: 27px;
-  margin: 16px 10px 0px 0px;
+  background-repeat: no-repeat; 
+    height: 33px;
+    width: 32px; 
+   margin: 0px 10px 0px 0px
 }
 
 .ic_linkedin {
-  background-image: url("../assets/ic_linkedin.png");
+  background-image: url("../assets/002-linkedin.png");
 }
 
 .ic_email {
-  background-image: url("../assets/ic_email.svg");
+  background-image: url("../assets/001-email.png");
 }
 
 .ic_gitHub {
-  background-image: url("../assets/ic_gitHub.svg");
+  background-image: url("../assets/003-github.png");
 }
 
 .contato {

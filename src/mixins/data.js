@@ -5,7 +5,7 @@ const contatos = [
         icon: 'icon ic_linkedin',
     },
     {
-        midiaSocial: 'mailto:rosines.almeida@gmail.com',
+        midiaSocial: 'rosines.almeida@gmail.com',
         link: 'mailto:rosines.almeida@gmail.com',
         icon: 'icon ic_email',
     },
@@ -54,7 +54,8 @@ const certificacao = [
     },
     {
         formacao: 'Scrum Fundamentals Certified',
-        instituicao: 'SCRUMstudy'
+        instituicao: 'SCRUMstudy',
+        link: 'https://www.credly.com/badges/72421ff8-e184-4394-a0c1-b2005649a7af/public_url'
     }
 ]
 
@@ -87,19 +88,20 @@ const cursos = [
 
 const projetos = [
     {
-        link: 'https://alura-quiz-react-rosines-almeida.vercel.app/ ',
-        techs: ['React',],
-        src: '/img/projeto_dog.gif'
+        link: 'https://dogs-nu.vercel.app',
+        techs: ['React', 'Redux', 'HTML', 'JavaScript'],
+        src: 'projeto_dog.4d0ba41e.gif'
     },
     {
-        link: 'https://dogs-nu.vercel.app/',
-        techs: ['React', 'Redux'],
-        src: '../assets/projeto_dog.gif'
+        link: 'https://techno-vue.vercel.app',
+        techs: ['VueJs', 'HTML', 'CSS', 'JavaScript'],
+        src: 'projeto_tecno.62c37cc2.gif'
     },
     {
-        link: 'techno-vue.vercel.app ',
-        techs: ['VueJs',],
-        src: '../assets/projeto_tecno.gif'
-    }
+        link: 'https://alura-quiz-react-rosines-almeida.vercel.app',
+        techs: ['React', 'HTML', 'CSS', 'JavaScript'],
+        src: 'projeto_quiz.91a1c48c.gif'
+    },
+
 ]
 export default { contatos, experiencias, formacao, certificacao, cursos, projetos };

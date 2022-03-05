@@ -1,22 +1,21 @@
 <template>
   <div id="app">
-    <TheHeader/>
+    <TheHeader />
     <router-view class="container"></router-view>
-    <!-- todo coolocar o rodape aqui  -->
-        <Rodape/>
+    <Footer />
   </div>
 </template>
 
 <script>
 import TheHeader from "@/components/TheHeader.vue";
-import Rodape from "@/components/Rodape.vue"
- 
+
+import Footer from "./components/Footer.vue";
 
 export default {
   components: {
     TheHeader,
-    Rodape
-  }
+    Footer,
+  },
 };
 </script>
 
@@ -25,7 +24,7 @@ body {
   margin: 0px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   color: #234;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 ul {
@@ -49,10 +48,9 @@ a.router-link-active {
 }
 
 .container {
-  /* max-width: 800px; */
   margin: 0 auto;
   padding: 20px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .v-enter {
@@ -75,4 +73,5 @@ a.router-link-active {
     display: block;
   }
 }
+
 </style>

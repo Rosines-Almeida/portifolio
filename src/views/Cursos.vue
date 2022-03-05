@@ -56,12 +56,14 @@
         >
           <div class="box-formacao">
             <p></p>
-            <p><a :href="item.link"  target="_blank"> {{ item.formacao }}</a></p>
+            <p>
+              <a :href="item.link" target="_blank"> {{ item.formacao }}</a>
+            </p>
             <p>{{ item.instituicao }}</p>
           </div>
         </div>
       </div>
- 
+
       <div class="container-formacao">
         <div class="separator-flex">
           <div class="description-separator">
@@ -72,17 +74,15 @@
         </div>
         <div class="alguns-cursos">
           <div class="box-alguns-cursos">
-            <div
-              class="box-certificacoes"
-              v-for="(curso, index) in cursos"
-              :key="index"
-            >
-  
-              <div :class="curso.formacao" class="curso" ><a :href="curso.link"  target="_blank">{{curso.formacao}}</a></div>
-              <div class="instituicao" v-html="curso.instituicao"></div>
-              <div class="horas" v-html="curso.horas"> </div>
-              
-              <!-- <hr class="hr"  v-if="cursos.length-1 != index">  -->
+            <div v-for="(curso, index) in cursos" :key="index">
+              <div class="box-certificacoes">
+                <div :class="curso.formacao" class="curso">
+                  <a :href="curso.link" target="_blank">{{ curso.formacao }}</a>
+                </div>
+                <div class="instituicao" v-html="curso.instituicao"></div>
+                <div class="horas" v-html="curso.horas"></div>
+              </div>
+              <hr v-if="cursos.length - 1 != index" />
             </div>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default {
   padding: 0px;
   display: flex;
 }
- 
+
 .container-experiencia {
   margin: 0px 100px 0 53px;
   width: 50%;
@@ -218,9 +218,17 @@ p:last-child {
 .box-certificacoes {
   display: flex;
   text-align: center;
-  border-bottom: 1px dashed #bab3b3;
   background-color: #ffffff;
- 
+}
+
+hr {
+  border: 1px dashed #bab3b3;
+}
+.box-certificacoes-last {
+  display: flex;
+  text-align: center;
+
+  background-color: #ffffff;
 }
 
 .box-certificacoes div {
@@ -229,13 +237,9 @@ p:last-child {
   align-self: center;
 }
 
- a{
+a {
   font-weight: 100;
   color: #131212;
-}
-
-.hr{
-    border-bottom: 1px dashed #bab3b3;
 }
 
 .instituicao {
@@ -251,7 +255,7 @@ p:last-child {
 .alguns-cursos {
   display: flex;
   box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
-   margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .box-alguns-cursos {
@@ -281,21 +285,17 @@ p:last-child {
   margin: 8px;
   align-self: center;
 }
-
 </style>
-
 
 <script>
 import data from "@/mixins/data.js";
 
 export default {
- 
-  created() { 
+  created() {
     this.experiencias = data.experiencias;
     this.formacao = data.formacao;
     this.certificacao = data.certificacao;
     this.cursos = data.cursos;
   },
-
 };
 </script>

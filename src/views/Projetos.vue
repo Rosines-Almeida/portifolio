@@ -6,9 +6,11 @@
         <div class="description">Conheça alguns projetos</div>
         <p>
           Projetos desenvolvidos em cursos e treinamentos. <br />
-          <br />Veja mais projetos no gitHub
+          <br />Veja mais projetos no gitHub   
+               <span>  <a href="https://github.com/Rosines-Almeida" target="_blank"><i class="contato icon ic_gitHub"> </i> </a>
+</span>
         </p>
-        <div><i class="icon ic_gitHub"> </i></div>
+     
       </div>
     </div>
     <div>
@@ -19,10 +21,10 @@
       >
         <div class="box-shadow-projetos">
           <div class="projeto-gift">
-            <img :src="projeto.src" />
+            <img :src=" `/img/${projeto.src}`"/> 
           </div>
           <div class="projeto-description-box">
-            <div class="projeto-link">{{ projeto.link }}</div>
+            <div class="projeto-link"><a :href="projeto.link" target="_blank"> {{ formatLink(projeto.link) }}</a></div>
             <div class="projeto-liguagens">
               <div
                 v-for="(tec, index) in projeto.techs"
@@ -35,12 +37,12 @@
           </div>
         </div>
       </div>
-       <div 
+       <!-- <div 
         class="box-projetos"
       >
         <div class="box-shadow-projetos">
           <div class="projeto-gift">
-            <img src="../assets/projeto_dog.gif"/>
+            <img src="../assets/projeto_tecno.gif"/>
           </div>
           <div class="projeto-description-box">
             <div class="projeto-link"> dsd</div>
@@ -52,7 +54,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -64,11 +66,9 @@
   display: flex;
 }
 .projeto-description {
-  color: white;
-
+  color: white; 
   text-align: center;
-  min-height: 100vh;
-
+  min-height: 100vh; 
   padding: 100px 50px;
 }
 
@@ -78,8 +78,7 @@
 
 .description {
   font-size: 1.6rem;
-  margin-top: 25px;
-  /* margin-bottom: 40px;; */
+  margin-top: 25px; 
 }
 
 .projeto-description p {
@@ -91,7 +90,6 @@
   margin: 0px 100px 0 20px;
   background: #6f94a9;
   width: 35%;
-  /* margin-right: 100px; */
 }
 
 .title {
@@ -110,6 +108,7 @@
   gap: 30px;
   margin-top: 50px;
   flex-direction: column;
+  margin-bottom: 25px;
 }
 
 .projeto-gift {
@@ -180,18 +179,31 @@ img {
   height: 217px;
   width: 600px;
 }
+
+.contato {
+  display: inline-block;
+  margin-left: 10px;
+}
 </style>
 
 <script>
-// import fetchData from "@/mixins/fetchData.js";
-import data from "@/mixins/data.js";
+ 
+import data from "@/mixins/data.js"; 
 
 export default {
-  // name: "contato",
-  // mixins: [fetchData],
-  created() {
-    // this.fetchData("/contato");
-    this.projetos = data.projetos;
+ 
+  created() { 
+    this.projetos = data.projetos; 
+      },
+  
+  methods: {
+  formatLink: function(link){  
+    return link.replace('https://','')
   },
-};
+  getImage: function(img){
+    return `/img/${img}`
+  }
+
+}
+}; 
 </script>
