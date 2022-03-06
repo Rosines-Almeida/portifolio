@@ -28,22 +28,6 @@ export default {
 </script>
 
 <style>
- .container-rota-curso{
-  margin: 0px;
-  padding: 0px;
-  display: flex;
- }
-
- .container-experiencia{
-     margin: 0px 100px 0 20px;
  
-  width: 50%;
-  min-height: 100vh;
- 
- }
-
- .container-curso{
- background: #6f94a9;
- }
 
 </style>

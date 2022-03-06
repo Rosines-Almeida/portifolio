@@ -1,7 +1,7 @@
 <template>
   <div class="container-contato">
     <div class="contato-imagem">
-      <img src="../assets/contato.png" alt="lanpada" width="500" height="600" />
+      <img src="../assets/contato.png" alt="lanpada"/>
     </div>
 
     <div class="contato-links">
@@ -12,7 +12,7 @@
       >
         <div class="contato">
           <i :class="contato.icon"> </i>
-          <div>
+          <div class="contato-link">
             <a :href="contato.link" target="_blank"
               >{{ contato.midiaSocial }}
             </a>
@@ -26,30 +26,33 @@
 <style scoped>
 .container-contato {
   margin: 0px;
-  padding: 0px;
+  padding: 0 20px;
   display: flex;
 }
 
 .contato-imagem {
-  margin: 0px 100px 0 20px;
+ 
   background: #6f94a9;
   width: 50%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 img {
-  margin: 100px 150px;
+  margin: 50px 100px;
+  width: 350px;
 }
 
 .contato-links {
-  margin: 170px 0px 0px 40px;
+ margin: 120px 90px;
 }
 
 .contato {
   display: flex;
 }
+
+ 
 .contato div {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 60px;
   font-weight: 100;
 }

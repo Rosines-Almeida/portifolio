@@ -6,11 +6,13 @@
         <div class="description">Conheça alguns projetos</div>
         <p>
           Projetos desenvolvidos em cursos e treinamentos. <br />
-          <br />Veja mais projetos no gitHub   
-               <span>  <a href="https://github.com/Rosines-Almeida" target="_blank"><i class="contato icon ic_gitHub"> </i> </a>
-</span>
+          <br />Veja mais no gitHub
+          <span>
+            <a href="https://github.com/Rosines-Almeida" target="_blank"
+              ><i class="contato icon ic_gitHub"> </i>
+            </a>
+          </span>
         </p>
-     
       </div>
     </div>
     <div>
@@ -21,10 +23,14 @@
       >
         <div class="box-shadow-projetos">
           <div class="projeto-gift">
-            <img :src=" `/img/${projeto.src}`"/> 
+            <img   :src="`/img/${projeto.src}`" />
           </div>
           <div class="projeto-description-box">
-            <div class="projeto-link"><a :href="projeto.link" target="_blank"> {{ formatLink(projeto.link) }}</a></div>
+            <div class="projeto-link">
+              <a :href="projeto.link" target="_blank">
+                {{ formatLink(projeto.link) }}</a
+              >
+            </div>
             <div class="projeto-liguagens">
               <div
                 v-for="(tec, index) in projeto.techs"
@@ -37,7 +43,7 @@
           </div>
         </div>
       </div>
-       <!-- <div 
+      <!-- <div 
         class="box-projetos"
       >
         <div class="box-shadow-projetos">
@@ -55,7 +61,6 @@
             </div>
           </div>
         </div> -->
-      </div>
     </div>
   </div>
 </template>
@@ -66,10 +71,10 @@
   display: flex;
 }
 .projeto-description {
-  color: white; 
+  color: white;
   text-align: center;
-  min-height: 100vh; 
-  padding: 100px 50px;
+  min-height: 100vh;
+  padding: 50px;
 }
 
 .projeto-description p {
@@ -77,12 +82,12 @@
 }
 
 .description {
-  font-size: 1.6rem;
-  margin-top: 25px; 
+  font-size: 1.375rem;
+  margin-top: 25px;
 }
 
 .projeto-description p {
-  font-size: 1.4rem;
+  font-size: 1.125rem;
   margin-top: 45px;
 }
 
@@ -94,11 +99,9 @@
 
 .title {
   color: white;
+  font-weight: bold; 
+  font-size: 2.25em;
   font-weight: bold;
-
-  font-size: 2.6em;
-  font-weight: bold;
-  margin-top: 60px;
   padding: 16px 55px;
 }
 
@@ -106,18 +109,21 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
   flex-direction: column;
   margin-bottom: 25px;
 }
 
 .projeto-gift {
   border-radius: 6px 6px 0px 0px;
-
   background-color: white;
   border-bottom: 0.6px dashed #e0e0e0;
   width: 600px;
   height: 217px;
+}
+
+.projeto-gift img{
+  border-radius: 6px 6px 0 0;
 }
 
 .box-shadow-projetos {
@@ -150,13 +156,14 @@
 }
 
 .liguagen {
-  background-color: #58c3ff;
-  width: 83px;
-  height: 18px;
-  font-size: 14px;
-  text-align: center;
-  border-radius: 7px;
-  color: white;
+background-color: #58c3ff;
+    width: 83px; 
+    font-size: 10px;
+    text-align: center;
+    border-radius: 7px;
+    color: white;
+    align-self: center; 
+    padding: 3px;
 }
 
 .icon {
@@ -187,23 +194,20 @@ img {
 </style>
 
 <script>
- 
-import data from "@/mixins/data.js"; 
+import data from "@/mixins/data.js";
 
 export default {
- 
-  created() { 
-    this.projetos = data.projetos; 
-      },
-  
-  methods: {
-  formatLink: function(link){  
-    return link.replace('https://','')
+  created() {
+    this.projetos = data.projetos;
   },
-  getImage: function(img){
-    return `/img/${img}`
-  }
 
-}
-}; 
+  methods: {
+    formatLink: function(link) {
+      return link.replace("https://", "");
+    },
+    getImage: function(img) {
+      return `/img/${img}`;
+    },
+  },
+};
 </script>

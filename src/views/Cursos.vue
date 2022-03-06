@@ -110,15 +110,14 @@ export default {
 
 .container-rota-curso {
   margin: 0px;
-  padding: 0px;
+  padding: 0 20px;
   display: flex;
 }
 
 .container-experiencia {
-  margin: 0px 100px 0 53px;
   width: 50%;
   min-height: 100vh;
-  padding-left: 40px;
+ padding-right: 40px;
 }
 .experiencia {
   display: flex;
@@ -147,7 +146,7 @@ export default {
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
-  padding: 30px;
+  padding: 20px;
   flex-wrap: wrap;
 }
 
@@ -155,12 +154,14 @@ export default {
   color: #867c7c;
   flex: 1;
   align-self: center;
+  font-size: 0.75em;
 }
 
 .box-experiencia-skill {
   color: #131212;
   flex: 1;
   margin-left: 30px;
+    font-size: 0.75em;
 }
 
 .skills {
@@ -174,23 +175,22 @@ export default {
   margin: 10px;
   border-radius: 16px;
   color: #131212 !important;
-  width: 100px;
-  height: 18px;
+  width: auto;
   text-align: center;
-  font-size: 15px;
-  padding: 7px 0px 6px;
+  font-size: 0.5em;
+  padding:6px 15px;
 }
 
 .title-experiencia {
-  font-size: 2.6em;
+  font-size: 2.12em;
   color: #bab3b3;
   font-weight: bold;
-  margin-top: 60 px;
-  padding: 16px 55px;
+    padding: 0px 59px;
+    margin-top: 30px;
 }
 
 .container-curso {
-  padding: 0px 0px 0 53px;
+  padding: 0 20px;
   background: #6f94a9;
   width: 50%;
 }
@@ -202,6 +202,7 @@ export default {
   border-radius: 5px;
   background-color: #ffffff;
   width: 190px;
+  font-size: 0.75em;
 }
 
 .box-formacao p:first-child,
@@ -219,10 +220,11 @@ p:last-child {
   display: flex;
   text-align: center;
   background-color: #ffffff;
+  font-size: 0.75em;
 }
 
 hr {
-  border: 1px dashed #bab3b3;
+  border-top: 1px dashed #bab3b3;
 }
 .box-certificacoes-last {
   display: flex;
@@ -249,7 +251,7 @@ a {
 .container-formacao {
   display: flex;
   gap: 15px;
-  margin-top: 60px;
+  margin-top: 35px;
 }
 
 .alguns-cursos {
@@ -275,7 +277,7 @@ a {
   color: #ffffff;
   flex: 1;
   text-align: center;
-  font-size: 18px;
+  font-size: 0.875em;
   font-weight: bold;
 }
 
@@ -285,6 +287,7 @@ a {
   margin: 8px;
   align-self: center;
 }
+
 </style>
 
 <script>
