@@ -56,9 +56,9 @@
         >
           <div class="box-formacao">
             <p></p>
-            <p>
-              <a :href="item.link" target="_blank"> {{ item.formacao }}</a>
-            </p>
+          
+              <a class="link" :href="item.link" target="_blank" >  <p class="link" v-html="item.formacao"></p></a>
+         
             <p>{{ item.instituicao }}</p>
           </div>
         </div>
@@ -115,8 +115,6 @@ export default {
 }
 
 .container-experiencia {
-  width: 50%;
-  min-height: 100vh;
  padding-right: 40px;
 }
 .experiencia {
@@ -127,7 +125,7 @@ export default {
   align-self: center;
   color: #131212;
   width: 91px;
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: bold;
 }
 
@@ -173,11 +171,11 @@ export default {
 .skill {
   background-color: #f5f5f5;
   margin: 10px;
-  border-radius: 16px;
+  border-radius: 1em;
   color: #131212 !important;
   width: auto;
   text-align: center;
-  font-size: 0.5em;
+  font-size: 0.82em;
   padding:6px 15px;
 }
 
@@ -192,7 +190,7 @@ export default {
 .container-curso {
   padding: 0 20px;
   background: #6f94a9;
-  width: 50%;
+  /* width: 50%; */
 }
 
 .box-formacao {
@@ -239,6 +237,9 @@ hr {
   align-self: center;
 }
 
+
+
+
 a {
   font-weight: 100;
   color: #131212;
@@ -258,13 +259,14 @@ a {
   display: flex;
   box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
   margin-bottom: 25px;
+ width: 100%;
 }
 
 .box-alguns-cursos {
   background-color: #ffffff;
   padding: 10px;
   border-radius: 5px;
-  width: 455px;
+  width: 100%;
 }
 
 .separator-flex {
@@ -288,6 +290,38 @@ a {
   align-self: center;
 }
 
+.link:hover{
+ color: blue !important;
+ text-decoration: underline;
+}
+
+@media screen and (max-width: 1022px) {
+ .container-rota-curso {
+    flex-direction: column;
+  }
+  .container-curso{
+        margin-top: 20px;
+  }
+  .container-formacao{
+    flex-wrap: wrap;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
+  .after{
+    display: none;
+  }
+.box-alguns-cursos {
+  width: 100%;
+}
+.alguns-cursos{
+  width: initial;
+}
+.title-experiencia {
+  font-size: 2em;
+}
+
+}
 </style>
 
 <script>

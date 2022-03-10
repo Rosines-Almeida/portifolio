@@ -17,13 +17,19 @@ export default {
 
 <style scoped> 
 
-footer { 
-  margin: 0 auto;
+footer {  
   display: flex;
-  justify-content: end;
-  padding: 10px 111px;  
+  justify-content: end; 
   background-color: #575454;
+  width: 100%;
+height: 100px; 
+bottom: 0;
+left: 0;     
 } 
+
+ul{
+ align-self: center;
+}
 
 ul li {
   display: inline-block;
@@ -57,6 +63,13 @@ li a {
   display: flex;
   padding: 0 10px;
 }
+
+/* @media  (min-width:745px)  and (max-width: 1022px) {
+ footer {
+   width: 107%;
+   background-color: red
+  }
+} */
   
 </style>
 

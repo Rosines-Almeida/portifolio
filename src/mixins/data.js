@@ -48,7 +48,7 @@ const formacao = [
 
 const certificacao = [
     {
-        formacao: 'Exam 480: Programming in HTML5 with JavaScript and CSS3',
+        formacao: 'Exam 480:  <br> Programming in HTML5  <br> with JavaScript and CSS3',
         instituicao: 'Microsoft',
         link: 'https://www.credly.com/badges/ff46d960-ee37-4ad3-9f44-b04488642a9c?'
     },

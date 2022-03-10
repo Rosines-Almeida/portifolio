@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <TheHeader />
-    <router-view class="container"></router-view>
-    <Footer />
+    <router-view class="main"></router-view>
+      <Footer class="foooteri" /> 
+   
   </div>
 </template>
 
@@ -47,11 +48,11 @@ a.router-link-active {
   color: #4b8;
 }
 
-.container {
+/* .container {
   margin: 0 auto;
   padding: 20px;
   background-color: #f5f5f5;
-}
+} */
 
 .v-enter {
   opacity: 0;
@@ -73,6 +74,22 @@ a:hover{
  text-decoration: underline;
 }
 
+/* #app{
+  display: flex;
+  flex-direction: column;
+}
+.main{
+  flex-grow: 1;
+} */
+.footeri{
+  background: #ffab62;
+width: 100%;
+height: 100px;
+position: absolute;
+bottom: 0;
+left: 0;
+}
+ 
 @media screen and (max-width: 400px) {
   .conteudo {
     display: block;

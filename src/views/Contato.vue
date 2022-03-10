@@ -38,8 +38,8 @@
 }
 
 img {
-  margin: 50px 100px;
-  width: 350px;
+  margin: 10px 50px ;
+  /* width: 84%; */
 }
 
 .contato-links {
@@ -52,7 +52,7 @@ img {
 
  
 .contato div {
-  font-size: 16px;
+  font-size: 1em;
   line-height: 60px;
   font-weight: 100;
 }
@@ -72,9 +72,40 @@ img {
   background-image: url("../assets/ic_email.svg");
 }
 
+
 .ic_gitHub {
   background-image: url("../assets/ic_gitHub.svg");
 }
+
+@media screen and (max-width: 1022px) {
+  img{
+width: 80%;
+  }
+  }
+
+@media screen and (max-width: 745px) {
+  .contato-imagem{
+    display: none;
+  }
+ .contato-links{
+    background-image:   url("../assets/contato.png");
+    mix-blend-mode: color-burn;
+    width: 100%;
+    min-height: 390px;
+    background-repeat: no-repeat;
+    margin: 35px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+ }
+ a{
+  color: black;
+    font-weight: 550;
+ }
+  }
 </style>
 
 <script>

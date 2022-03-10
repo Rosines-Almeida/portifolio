@@ -5,7 +5,7 @@
         <div class="title">Projetos</div>
         <div class="description">Conheça alguns projetos</div>
         <p>
-          Projetos desenvolvidos em cursos e treinamentos. <br />
+          Projetos desenvolvidos em cursos e treinamentos. 
           <br />Veja mais no gitHub
           <span>
             <a href="https://github.com/Rosines-Almeida" target="_blank"
@@ -43,7 +43,7 @@
           </div>
         </div>
       </div>
-      <!-- <div 
+      <div 
         class="box-projetos"
       >
         <div class="box-shadow-projetos">
@@ -60,11 +60,14 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
+        </div>
     </div>
   </div>
 </template>
 <style scoped>
+
+
 .container-projeto {
   margin: 0px;
   padding: 0px;
@@ -73,8 +76,8 @@
 .projeto-description {
   color: white;
   text-align: center;
-  min-height: 100vh;
-  padding: 50px;
+  /* min-height: 100vh; */
+ margin-top: 15%;
 }
 
 .projeto-description p {
@@ -82,12 +85,12 @@
 }
 
 .description {
-  font-size: 1.375rem;
+  font-size: 1.375em;
   margin-top: 25px;
 }
 
 .projeto-description p {
-  font-size: 1.125rem;
+  font-size: 1.125em;
   margin-top: 45px;
 }
 
@@ -99,7 +102,7 @@
 
 .title {
   color: white;
-  font-weight: bold; 
+  
   font-size: 2.25em;
   font-weight: bold;
   padding: 16px 55px;
@@ -118,7 +121,7 @@
   border-radius: 6px 6px 0px 0px;
   background-color: white;
   border-bottom: 0.6px dashed #e0e0e0;
-  width: 600px;
+     width: 100%;
   height: 217px;
 }
 
@@ -130,6 +133,7 @@
   box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
   height: 289px;
   border-radius: 0px 0px 6px 6px;
+  width: 100%;
 }
 
 .projeto-description-box {
@@ -138,13 +142,13 @@
   height: 70px;
   background-color: white;
   border-radius: 0px 0px 6px 6px;
-  width: 600px;
+  width: 100%;
   flex-direction: column;
 }
 
 .projeto-link {
   margin: auto auto;
-  font-size: 16px;
+  font-size: 1em;
   color: #131212;
   display: inline-block;
 }
@@ -153,12 +157,14 @@
   display: flex;
   gap: 5px;
   margin: auto auto;
+  width: 100%;
+   justify-content: center;
 }
 
 .liguagen {
-background-color: #58c3ff;
-    width: 83px; 
-    font-size: 10px;
+  background-color: #58c3ff;
+    width: 15%;
+    font-size: 0.625em;
     text-align: center;
     border-radius: 7px;
     color: white;
@@ -177,7 +183,7 @@ background-color: #58c3ff;
   background-image: url("../assets/ic_gitHub.svg");
 }
 span {
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 60px;
   font-weight: 100;
 }
@@ -190,6 +196,42 @@ img {
 .contato {
   display: inline-block;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 1022px) {
+ .container-projeto {
+    flex-direction: column;
+  }
+  .projeto-background{
+    width: 100%;
+    margin: 0;
+  }
+  .box-projetos {
+  display: block; 
+  margin: 30px;
+}
+img{
+  width: 100%;
+}
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 16px 55px;
+}
+.description {
+  font-size: 0.875em;
+  margin-top: 5px;
+}
+p{
+  font-size: 0.875em !important;
+}
+.projeto-description{
+  margin-top: 5%;
+}
+.projeto-description p{
+margin:0
+}
+
 }
 </style>
 
