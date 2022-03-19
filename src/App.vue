@@ -48,6 +48,10 @@ a.router-link-active {
   color: #4b8;
 }
 
+.bg-dots{
+   background-image: url("./assets/bg_dots.png"); 
+}
+
 /* .container {
   margin: 0 auto;
   padding: 20px;

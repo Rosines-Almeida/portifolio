@@ -1,5 +1,5 @@
 <template>
-  <div class="container-projeto">
+  <div class="container-projeto bg-dots">
     <div class="projeto-background">
       <div class="projeto-introduce">
         <div class="introduce-title">Projetos</div>
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="bg-dots"> 
       <div class="box-projetos">
         <div class="box-projetos-shadow">
           <div class="projeto-gift">
@@ -79,7 +79,12 @@
     </div>
   </div>
 </template>
+
 <style scoped>
+.bg-dots{
+   background-image: url("../assets/bg_dots.png"); 
+}
+
 .container-projeto {
   margin: 0px;
   padding: 0px;

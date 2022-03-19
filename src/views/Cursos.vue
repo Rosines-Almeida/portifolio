@@ -1,5 +1,5 @@
 <template>
-  <div class="container-rota-curso">
+  <div class="container-rota-curso bg-dots">
     <div class="container-experiencia">
       <p class="title-experiencia">Experiência</p>
 
