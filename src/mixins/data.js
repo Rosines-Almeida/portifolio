@@ -19,19 +19,18 @@ const contatos = [
 
 const experiencias = [
     {
-        year: '2021',
-        description: 'Atuo no projeto com melhorias e nova simplemantações atuando com typescriprt, vue, scss, html',
+        year: '2022',
+        description: 'Atuo no projeto novas implemantações e melhorias',
         title: 'Analista de desenvolvimento  Front-end Pleno',
         skills: ['TypeScript', 'VueJS', 'SCSS']
     },
     {
-        year: '2022',
-        description: 'Atuo no projeto com melhorias e nova simplemantações atuando com typescriprt, vue, scss, html',
-        title: 'Analista de desenvolvimento  Front-end Plen',
+        year: '2021',
+        description: 'Atei no projeto com melhorias e nova simplemantações atuando com typescriprt, vue, scss, html',
+        title: 'Analista de desenvolvimento  Front-end Junior',
         skills: ['TypeScript', 'VueJS', 'SCSS']
-    }
+    },
 ]
-
 const formacao = [
     {
 
@@ -89,17 +88,17 @@ const cursos = [
 const projetos = [
     {
         link: 'https://dogs-nu.vercel.app',
-        techs: ['React', 'Redux', 'HTML', 'JavaScript'],
+        skills: ['React', 'Redux', 'HTML', 'JavaScript'],
         src: 'projeto_dog.4d0ba41e.gif'
     },
     {
         link: 'https://techno-vue.vercel.app',
-        techs: ['VueJs', 'HTML', 'CSS', 'JavaScript'],
+        skills: ['VueJs', 'HTML', 'CSS', 'JavaScript'],
         src: 'projeto_tecno.62c37cc2.gif'
     },
     {
         link: 'https://alura-quiz-react-rosines-almeida.vercel.app',
-        techs: ['React', 'HTML', 'CSS', 'JavaScript'],
+        skills: ['React', 'HTML', 'CSS', 'JavaScript'],
         src: 'projeto_quiz.91a1c48c.gif'
     },
 

@@ -3,12 +3,12 @@
     <nav class="topnav">
       <!-- <a href="#home" class="active">Logo</a> -->
        <router-link to="/"><div class="logo icon-home"></div></router-link>
-      <div id="myLinks">
-        <router-link to="/projetos" class="a menu">Projetos</router-link>
+      <div id="myLinks"  @click="closeMenu()">
+        <router-link to="/projetos" class="a menu"  @click="closeMenu()">Projetos</router-link>
         <router-link to="/cursos" class="a menu">Experiência e Cursos</router-link>
         <router-link to="/contato"  class="a menu">Contatos</router-link>
       </div>
-      <a href="javascript:void(0);" class="icon" @click="myFunction()">
+      <a href="javascript:void(0);" class="icon" @click="openMenu()">
         <i class="fa fa-bars"></i>
       </a>
     </nav>
@@ -19,7 +19,7 @@
 export default {
   name: "TheHeader",
   methods: {
-    myFunction: function () {
+    openMenu: function () { 
       var x = document.getElementById("myLinks");
       if (x.style.display === "block") {
         x.style.display = "none";
@@ -27,6 +27,13 @@ export default {
         x.style.display = "block";
       }
     },
+    closeMenu: function(){ 
+      let width = screen.width;
+      if(width <= 1022  ){
+       var x = document.getElementById("myLinks");
+       x.style.display = "none";
+      }
+    }
   },
 };
 </script>
@@ -88,6 +95,9 @@ li a {
   .icon{
     display: none;
   }
+    .topnav #myLinks {
+    display: block;
+  }
    
 }
 @media screen and (max-width: 1022px) {
@@ -110,11 +120,12 @@ li a {
   }
 
   .topnav a.icon {
-      color: #ddd;
+       color: black;
     display: block;
     /* position: absolute; */
     right: 0;
     top: 0;
+    background-color: #ddd;
   }
   .myLinks a {
     background: white;
@@ -123,11 +134,18 @@ li a {
     right: 0;
     top: 0;
   }
-
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+  .topnav a{
+    /* background-color: #ddd; */
+    color: #131212;
+        padding: 9px;
+   
+    font-size: 12px;
   }
+
+  /* .topnav a:hover {
+    background-color: #ddd;
+    color: #131212;
+  } */
 
   .active {
     background-color: #04aa6d;

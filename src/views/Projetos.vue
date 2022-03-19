@@ -1,12 +1,12 @@
 <template>
   <div class="container-projeto">
     <div class="projeto-background">
-      <div class="projeto-description">
-        <div class="title">Projetos</div>
-        <div class="description">Conheça alguns projetos</div>
+      <div class="projeto-introduce">
+        <div class="introduce-title">Projetos</div>
+        <div class="introduce-description">Conheça meus projetos pessoais.</div>
         <p>
-          Projetos desenvolvidos em cursos e treinamentos. 
-          <br />Veja mais no gitHub
+          Desenvolvidos para treinar minhas habilidades em diversas tecnologias front-end.
+          <br />E veja mais no gitHub
           <span>
             <a href="https://github.com/Rosines-Almeida" target="_blank"
               ><i class="contato icon ic_gitHub"> </i>
@@ -15,81 +15,92 @@
         </p>
       </div>
     </div>
+
     <div>
-      <div
-        v-for="(projeto, index) in projetos"
-        :key="index"
-        class="box-projetos"
-      >
-        <div class="box-shadow-projetos">
+      <div class="box-projetos">
+        <div class="box-projetos-shadow">
           <div class="projeto-gift">
-            <img   :src="`/img/${projeto.src}`" />
+            <img src="../assets/projeto_dog.gif" />
           </div>
-          <div class="projeto-description-box">
-            <div class="projeto-link">
-              <a :href="projeto.link" target="_blank">
-                {{ formatLink(projeto.link) }}</a
-              >
-            </div>
-            <div class="projeto-liguagens">
+          <div class="box-projeto-description">
+            <div class="projeto-link">{{ formatLink(projetos[0].link) }}</div>
+            <div class="projeto-skills">
               <div
-                v-for="(tec, index) in projeto.techs"
+                v-for="(skill, index) in projetos[0].skills"
                 :key="index"
-                class="liguagen"
+                class="skill"
               >
-                {{ tec }}
+                {{ skill }}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div 
-        class="box-projetos"
-      >
-        <div class="box-shadow-projetos">
+
+      <div class="box-projetos">
+        <div class="box-projetos-shadow">
           <div class="projeto-gift">
-            <img src="../assets/projeto_tecno.gif"/>
+            <img src="../assets/projeto_tecno.gif" />
           </div>
-          <div class="projeto-description-box">
-            <div class="projeto-link"> dsd</div>
-            <div class="projeto-liguagens">
-              <div 
-                class="liguagen"
+          <div class="box-projeto-description">
+            <div class="projeto-link">{{ formatLink(projetos[1].link) }}</div>
+            <div class="projeto-skills">
+              <div
+                v-for="(skill, index) in projetos[1].skills"
+                :key="index"
+                class="skill"
               >
-               react
+                {{ skill }}
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="box-projetos">
+        <div class="box-projetos-shadow">
+          <div class="projeto-gift">
+            <img src="../assets/projeto_quiz.gif" />
+          </div>
+          <div class="box-projeto-description">
+            <div class="projeto-link">{{ formatLink(projetos[2].link) }}</div>
+            <div class="projeto-skills">
+              <div
+                v-for="(skill, index) in projetos[2].skills"
+                :key="index"
+                class="skill"
+              >
+                {{ skill }}
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 </template>
 <style scoped>
-
-
 .container-projeto {
   margin: 0px;
   padding: 0px;
   display: flex;
 }
-.projeto-description {
+.projeto-introduce {
   color: white;
   text-align: center;
-  /* min-height: 100vh; */
- margin-top: 15%;
+  margin-top: 15%;
 }
 
-.projeto-description p {
+.projeto-introduce p {
   color: white;
 }
 
-.description {
-  font-size: 1.375em;
+.introduce-description {
+  font-size: 1.2em;
   margin-top: 25px;
 }
 
-.projeto-description p {
+.projeto-introduce p {
   font-size: 1.125em;
   margin-top: 45px;
 }
@@ -100,10 +111,9 @@
   width: 35%;
 }
 
-.title {
+.introduce-title {
   color: white;
-  
-  font-size: 2.25em;
+  font-size: 2em;
   font-weight: bold;
   padding: 16px 55px;
 }
@@ -121,22 +131,22 @@
   border-radius: 6px 6px 0px 0px;
   background-color: white;
   border-bottom: 0.6px dashed #e0e0e0;
-     width: 100%;
+  width: 100%;
   height: 217px;
 }
 
-.projeto-gift img{
+.projeto-gift img {
   border-radius: 6px 6px 0 0;
 }
 
-.box-shadow-projetos {
+.box-projetos-shadow {
   box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
   height: 289px;
   border-radius: 0px 0px 6px 6px;
   width: 100%;
 }
 
-.projeto-description-box {
+.box-projeto-description {
   display: flex;
   flex-wrap: wrap;
   height: 70px;
@@ -153,23 +163,23 @@
   display: inline-block;
 }
 
-.projeto-liguagens {
+.projeto-skills {
   display: flex;
   gap: 5px;
   margin: auto auto;
   width: 100%;
-   justify-content: center;
+  justify-content: center;
 }
 
-.liguagen {
+.skill {
   background-color: #58c3ff;
-    width: 15%;
-    font-size: 0.625em;
-    text-align: center;
-    border-radius: 7px;
-    color: white;
-    align-self: center; 
-    padding: 3px;
+  width: 15%;
+  font-size: 0.625em;
+  text-align: center;
+  border-radius: 7px;
+  color: white;
+  align-self: center;
+  padding: 3px;
 }
 
 .icon {
@@ -199,38 +209,46 @@ img {
 }
 
 @media screen and (max-width: 1022px) {
- .container-projeto {
+  .container-projeto {
     flex-direction: column;
   }
-  .projeto-background{
+
+  .projeto-background {
     width: 100%;
     margin: 0;
   }
+
   .box-projetos {
-  display: block; 
-  margin: 30px;
-}
-img{
-  width: 100%;
-}
-.title {
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 16px 55px;
-}
-.description {
-  font-size: 0.875em;
-  margin-top: 5px;
-}
-p{
-  font-size: 0.875em !important;
-}
-.projeto-description{
-  margin-top: 5%;
-}
-.projeto-description p{
-margin:0
-}
+    display: block;
+    margin: 30px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .introduce-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 16px 55px;
+  }
+
+  .introduce-description {
+    font-size: 0.875em;
+    margin-top: 5px;
+  }
+
+  p {
+    font-size: 0.875em !important;
+  }
+
+  .projeto-introduce {
+    margin-top: 5%;
+  }
+
+  .projeto-introduce p {
+    margin: 0;
+  }
 
 }
 </style>
@@ -244,10 +262,10 @@ export default {
   },
 
   methods: {
-    formatLink: function(link) {
+    formatLink: function (link) {
       return link.replace("https://", "");
     },
-    getImage: function(img) {
+    getImage: function (img) {
       return `/img/${img}`;
     },
   },
