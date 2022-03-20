@@ -1,24 +1,24 @@
 <template>
   <div class="container-rota-curso bg-dots">
-    <div class="section-experience">  
+    <div class="section-experience">
       <p class="experience-title">Experiência</p>
       <div
         class="d-flex gap-10 mt-3"
         v-for="(experience, index) in experiences"
         :key="index"
       >
-        <div class="separator">{{ experience.year }}</div>  
+        <div class="separator">{{ experience.year }}</div>
         <div class="experience-box">
-          <div class="experience-box-description">  
+          <div class="experience-box-description">
             {{ experience.description }}
           </div>
           <div class="experience-box-skills">
             <div>{{ experience.title }}</div>
             <div class="skills">
               <p
-                v-for="(skill, index) in experience.skills"  
+                v-for="(skill, index) in experience.skills"
                 :key="index"
-                class="skill"  
+                class="skill"
               >
                 {{ skill }}
               </p>
@@ -28,60 +28,69 @@
       </div>
     </div>
 
-    <div class="section-education">  
-      <div class="container-education">  
-        <div class="separator-flex">
-          <div class="description-separator">Formação</div>
-          <div class="after"></div>
+    <div class="section-education">
+      <div class="container-education">
+        <div class="education-type">
+          <div class="education-description">Formação</div>
+          <div class="education-description-detail"></div>
         </div>
-        <div class="d-flex gap-10" v-for="(item, index) in formacao" :key="index">
+        <div
+          class="d-flex gap-10"
+          v-for="(item, index) in formation"
+          :key="index"
+        >
           <div class="container-education-box">
-            <p>{{ item.tipo }}</p>
-            <p>{{ item.formacao }}</p>
-            <p>{{ item.instituicao }}</p>
+            <p>{{ item.grade }}</p>
+            <p>{{ item.formation }}</p>
+            <p>{{ item.institution }}</p>
           </div>
         </div>
       </div>
 
       <div class="container-education">
-        <div class="separator-flex">
-          <div class="description-separator">Certificação</div>
-          <div class="after"></div>
+        <div class="education-type">
+          <div class="education-description">Certificação</div>
+          <div class="education-description-detail"></div>
         </div>
         <div
-          class="d-flex gap-10"  
-          v-for="(item, index) in certificacao"  
+          class="d-flex gap-10"
+          v-for="(item, index) in certification"
           :key="index"
         >
           <div class="container-education-box">
-            <p></p> 
-              <a class="certification-link" :href="item.link" target="_blank" > 
-                 <p class="certification-link" v-html="item.formacao"></p>
-                 </a> 
-            <p>{{ item.instituicao }}</p>
+            <p></p>
+            <a class="certification-link" :href="item.link" target="_blank">
+              <p class="certification-link" v-html="item.formation"></p>
+            </a>
+            <p>{{ item.institution }}</p>
           </div>
         </div>
       </div>
 
-      <div class="container-formacao">
-        <div class="separator-flex">
-          <div class="description-separator">
+      <div class="container-education">
+        <div class="education-type">
+          <div class="education-description">
             Alguns <br />
             Cursos
           </div>
-          <div class="after"></div>
+          <div class="education-description-detail"></div>
         </div>
-        <div class="alguns-cursos">
+        <div class="container-continue-education">
           <div class="box-alguns-cursos">
-            <div v-for="(curso, index) in cursos" :key="index">
-              <div class="box-certificacoes">
-                <div :class="curso.formacao" class="curso">
-                  <a :href="curso.link" target="_blank">{{ curso.formacao }}</a>
+            <div v-for="(course, index) in courses" :key="index">
+              <div class="continue-education-certification">
+                <div>
+                  <a :href="course.link" target="_blank">{{
+                    course.formation
+                  }}</a>
                 </div>
-                <div class="instituicao" v-html="curso.instituicao"></div>
-                <div class="horas" v-html="curso.horas"></div>
+                <div
+                  class="continue-education-institution"
+                  v-html="course.institution"
+                ></div>
+                <div v-html="course.hours"></div>
               </div>
-              <hr v-if="cursos.length - 1 != index" />
+              <hr v-if="courses.length - 1 != index" />
             </div>
           </div>
         </div>
@@ -89,24 +98,8 @@
     </div>
   </div>
 </template>
-
-<script scoped>
-import fetchData from "@/mixins/fetchData.js";
-
-export default {
-  name: "contato",
-  mixins: [fetchData],
-  created() {
-    this.fetchData("/contato");
-  },
-};
-</script>
-
+ 
 <style>
-.mt-3 {
-  margin-top: 30px;
-}
-
 .container-rota-curso {
   margin: 0px;
   padding: 0 20px;
@@ -114,14 +107,22 @@ export default {
 }
 
 .section-experience {
- padding-right: 40px;
+  padding-right: 40px;
 }
-.d-flex{
-display: flex;
-}  
+.d-flex {
+  display: flex;
+}
 
-.gap-10{
+.gap-10 {
   gap: 10;
+}
+
+.separator::after {
+  content: " ";
+  height: 200px;
+  border-right: 4px solid #299492;
+  margin: 33px;
+  align-self: center;
 }
 
 .separator {
@@ -130,24 +131,26 @@ display: flex;
   width: 91px;
   font-size: 1.125em;
   font-weight: bold;
+  text-indent: 15px;
 }
 
-.separator::after {
-  content: " ";
-  height: 200px;
-  border-right: 4px solid #299492;
-  margin: 8px;
-  align-self: center;
-}
-
-.separator-flex {
+.education-type {
   display: flex;
   width: 115px;
 }
 
+.education-description {
+  align-self: center;
+  color: #ffffff;
+  flex: 1;
+  text-align: center;
+  font-size: 0.875em;
+  font-weight: bold;
+}
+
 .experience-box {
   display: flex;
-  width: auto;
+  width: 80%;
   height: auto;
   border-radius: 10px;
   background-color: #ffffff;
@@ -167,7 +170,7 @@ display: flex;
   color: #131212;
   flex: 1;
   margin-left: 30px;
-    font-size: 0.75em;
+  font-size: 0.75em;
 }
 
 .skills {
@@ -184,21 +187,20 @@ display: flex;
   width: auto;
   text-align: center;
   font-size: 0.82em;
-  padding:6px 15px;
+  padding: 6px 15px;
 }
 
 .experience-title {
   font-size: 2.12em;
   color: #bab3b3;
   font-weight: bold;
-    padding: 0px 59px;
-    margin-top: 30px;
+  padding: 0px 88px;
+  margin-top: 30px;
 }
 
-.section-education  {
+.section-education {
   padding: 0 20px;
   background: #6f94a9;
-  /* width: 50%; */
 }
 
 .container-education-box {
@@ -216,20 +218,7 @@ p:last-child {
   color: #867c7c;
 }
 
-.certificacoe {
-  box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
-  border-radius: 5px;
-  padding: 0 15px;
-}
-
 .continue-education-certification {
-  display: flex;
-  text-align: center;
-  background-color: #ffffff;
-  font-size: 0.75em;
-}
-
-.box-certificacoes {
   display: flex;
   text-align: center;
   background-color: #ffffff;
@@ -239,12 +228,6 @@ p:last-child {
 hr {
   border-top: 1px dashed #bab3b3;
 }
-/* .box-certificacoes-last {
-  display: flex;
-  text-align: center;
-
-  background-color: #ffffff;
-} */
 
 .continue-education-certification div {
   padding: 10px;
@@ -252,24 +235,16 @@ hr {
   align-self: center;
 }
 
-.box-certificacoes div {
-  padding: 10px;
-  flex: 1;
-  align-self: center;
-}
-
-
-
 a {
   font-weight: 100;
   color: #131212;
 }
 
-.instituicao {
+.continue-education-institution {
   color: #867c7c;
 }
 
-.container-education  {
+.container-education {
   display: flex;
   gap: 15px;
   margin-top: 35px;
@@ -285,14 +260,14 @@ a {
   display: flex;
   box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
   margin-bottom: 25px;
- width: 100%;
+  width: 100%;
 }
 
 .alguns-cursos {
   display: flex;
   box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
   margin-bottom: 25px;
- width: 100%;
+  width: 100%;
 }
 
 .container-continue-education {
@@ -309,56 +284,43 @@ a {
   width: 100%;
 }
 
-
-
-
-.description-separator {
-  align-self: center;
-  color: #ffffff;
-  flex: 1;
-  text-align: center;
-  font-size: 0.875em;
-  font-weight: bold;
-}
-
-.after {
+.education-description-detail {
   height: 20px;
-  border-right: 4px solid #ffffff;
-  margin: 8px;
   align-self: center;
+  border-right: 4px solid #bab3b3;
+  margin: -15px;
 }
 
-.certification-link:hover{
- color: blue !important;
- text-decoration: underline;
+.certification-link:hover {
+  color: blue !important;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1022px) {
- .container-rota-curso {
+  .container-rota-curso {
     flex-direction: column;
   }
   .section-education {
-        margin-top: 20px;
+    margin-top: 20px;
   }
   .container-education {
     flex-wrap: wrap;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .after{
+  .education-description-detail {
     display: none;
   }
-.container-continue-education {
-  width: 100%;
-}
-.container-continue-education{
-  width: initial;
-}
-.experience-title {
-  font-size: 2em;
-}
-
+  .container-continue-education {
+    width: 100%;
+  }
+  .container-continue-education {
+    width: initial;
+  }
+  .experience-title {
+    font-size: 2em;
+  }
 }
 </style>
 
@@ -368,9 +330,9 @@ import data from "@/mixins/data.js";
 export default {
   created() {
     this.experiences = data.experiences;
-    this.formacao = data.formacao;
-    this.certificacao = data.certificacao;
-    this.cursos = data.cursos;
+    this.formation = data.formation;
+    this.certification = data.certification;
+    this.courses = data.courses;
   },
 };
 </script>

@@ -2,7 +2,7 @@
   <div id="app">
     <TheHeader />
     <router-view class="main"></router-view>
-      <Footer class="foooteri" /> 
+      <Footer /> 
    
   </div>
 </template>
@@ -52,11 +52,9 @@ a.router-link-active {
    background-image: url("./assets/bg_dots.png"); 
 }
 
-/* .container {
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-} */
+.mt-3 {
+  margin-top: 30px;
+}
 
 .v-enter {
   opacity: 0;
@@ -77,22 +75,7 @@ a:hover{
  color: blue;
  text-decoration: underline;
 }
-
-/* #app{
-  display: flex;
-  flex-direction: column;
-}
-.main{
-  flex-grow: 1;
-} */
-.footeri{
-  background: #ffab62;
-width: 100%;
-height: 100px;
-position: absolute;
-bottom: 0;
-left: 0;
-}
+ 
  
 @media screen and (max-width: 400px) {
   .conteudo {

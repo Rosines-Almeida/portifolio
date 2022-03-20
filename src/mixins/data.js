@@ -31,56 +31,56 @@ const experiences = [
         skills: ['VueJS', 'SCSS', 'TypeScript']
     },
 ]
-const formacao = [
+const formation = [
     {
 
-        tipo: 'Bootcamp',
-        formacao: 'Desenvolvimento Front End',
-        instituicao: 'Laboratória'
+        grade: 'Bootcamp',
+        formation: 'Desenvolvimento Front End',
+        institution: 'Laboratória'
     },
     {
-        tipo: 'Graduação',
-        formacao: 'Farmácia',
-        instituicao: 'Universidade de Santo Amaro'
+        grade: 'Graduação',
+        formation: 'Farmácia',
+        institution: 'Universidade de Santo Amaro'
     }
 ]
 
-const certificacao = [
+const certification = [
     {
-        formacao: 'Exam 480:  <br> Programming in HTML5  <br> with JavaScript and CSS3',
-        instituicao: 'Microsoft',
+        formation: 'Exam 480:  <br> Programming in HTML5  <br> with JavaScript and CSS3',
+        institution: 'Microsoft',
         link: 'https://www.credly.com/badges/ff46d960-ee37-4ad3-9f44-b04488642a9c?'
     },
     {
-        formacao: 'Scrum Fundamentals Certified',
-        instituicao: 'SCRUMstudy',
+        formation: 'Scrum Fundamentals Certified',
+        institution: 'SCRUMstudy',
         link: 'https://www.credly.com/badges/72421ff8-e184-4394-a0c1-b2005649a7af/public_url'
     }
 ]
 
-const cursos = [
+const courses = [
     {
-        formacao: 'Vue.js Completo',
-        instituicao: 'Origamid',
-        horas: '44 horas',
+        formation: 'Vue.js Completo',
+        institution: 'Origamid',
+        hours: '44 horas',
         link: 'https://www.origamid.com/certificate/640536ee/'
     },
     {
-        formacao: 'TypeScript I: Evoluindo seu JavaScript',
-        instituicao: 'Alura',
-        horas: '8 horas',
+        formation: 'TypeScript I: Evoluindo seu JavaScript',
+        institution: 'Alura',
+        hours: '8 horas',
         link: 'https://cursos.alura.com.br/certificate/6a291bd8-2c79-40c5-be23-42b741362ee2'
     },
     {
-        formacao: 'TypeScript II: Mais técnica e boas práticas',
-        instituicao: 'Alura',
-        horas: '10 horas',
+        formation: 'TypeScript II: Mais técnica e boas práticas',
+        institution: 'Alura',
+        hours: '10 horas',
         link: 'https://cursos.alura.com.br/certificate/6a291bd8-2c79-40c5-be23-42b741362ee2'
     },
     {
-        formacao: 'React Completo',
-        instituicao: 'Origamid',
-        horas: '36 horas',
+        formation: 'React Completo',
+        institution: 'Origamid',
+        hours: '36 horas',
         link: 'https://www.origamid.com/certificate/3f6559e6/'
     }
 ]
@@ -103,4 +103,4 @@ const projetos = [
     },
 
 ]
-export default { contatos, experiences, formacao, certificacao, cursos, projetos };
+export default { contatos, experiences, formation, certification, courses, projetos };

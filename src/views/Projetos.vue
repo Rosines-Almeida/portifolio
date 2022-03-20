@@ -23,7 +23,7 @@
             <img src="../assets/projeto_dog.gif" />
           </div>
           <div class="box-projeto-description">
-            <div class="projeto-link">{{ formatLink(projetos[0].link) }}</div>
+            <div class="projeto-link"> <a :href="projetos[0].link" target="_blank">{{ formatLink(projetos[0].link) }} </a></div>
             <div class="projeto-skills">
               <div
                 v-for="(skill, index) in projetos[0].skills"
@@ -43,7 +43,7 @@
             <img src="../assets/projeto_tecno.gif" />
           </div>
           <div class="box-projeto-description">
-            <div class="projeto-link">{{ formatLink(projetos[1].link) }}</div>
+            <div class="projeto-link"> <a :href="projetos[1].link" target="_blank">{{ formatLink(projetos[1].link) }} </a></div>
             <div class="projeto-skills">
               <div
                 v-for="(skill, index) in projetos[1].skills"
@@ -63,7 +63,7 @@
             <img src="../assets/projeto_quiz.gif" />
           </div>
           <div class="box-projeto-description">
-            <div class="projeto-link">{{ formatLink(projetos[2].link) }}</div>
+            <div class="projeto-link"> <a :href="projetos[2].link" target="_blank">{{ formatLink(projetos[2].link) }} </a> </div>
             <div class="projeto-skills">
               <div
                 v-for="(skill, index) in projetos[2].skills"
@@ -81,9 +81,7 @@
 </template>
 
 <style scoped>
-.bg-dots{
-   background-image: url("../assets/bg_dots.png"); 
-}
+
 
 .container-projeto {
   margin: 0px;
