@@ -17,7 +17,7 @@ const contatos = [
 
 ]
 
-const experiencias = [
+const experiences = [
     {
         year: '2022',
         description: 'Atuo no projeto novas implemantações e melhorias',
@@ -28,7 +28,7 @@ const experiencias = [
         year: '2021',
         description: 'Atei no projeto com melhorias e nova simplemantações atuando com typescriprt, vue, scss, html',
         title: 'Analista de desenvolvimento  Front-end Junior',
-        skills: ['TypeScript', 'VueJS', 'SCSS']
+        skills: ['VueJS', 'SCSS', 'TypeScript']
     },
 ]
 const formacao = [
@@ -103,4 +103,4 @@ const projetos = [
     },
 
 ]
-export default { contatos, experiencias, formacao, certificacao, cursos, projetos };
+export default { contatos, experiences, formacao, certificacao, cursos, projetos };
