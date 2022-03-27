@@ -8,12 +8,13 @@
         :key="index"
       >
         <div class="separator">{{ experience.year }}</div>
+      
         <div class="experience-box">
-          <div class="experience-box-description">
-            {{ experience.description }}
+         <div class="experience-box-title">{{ experience.title }}</div>
+         <div class="experience-box-flex"> 
+          <div class="experience-box-description" v-html="experience.description">
           </div>
-          <div class="experience-box-skills">
-            <div>{{ experience.title }}</div>
+          <div class="experience-box-skills"> 
             <div class="skills">
               <p
                 v-for="(skill, index) in experience.skills"
@@ -24,6 +25,7 @@
               </p>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -149,14 +151,21 @@
 }
 
 .experience-box {
-  display: flex;
-  width: 80%;
   height: auto;
   border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
   padding: 20px;
   flex-wrap: wrap;
+}
+
+.experience-box-flex{
+display: flex;
+}
+
+.experience-box-title{
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .experience-box-description {
@@ -237,7 +246,7 @@ hr {
 
 a {
   font-weight: 100;
-  color: #131212;
+  color: #867c7c;
 }
 
 .continue-education-institution {
@@ -321,6 +330,31 @@ a {
   .experience-title {
     font-size: 2em;
   }
+  .experience-box-skills{
+    margin-left: auto;
+  }
+  .container-education-box{
+    padding: 20px 40px;
+      width: auto;
+  }
+  .container-continue-education{
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 384px) {
+.d-flex{
+  flex-direction: column;
+}
+.separator::after{
+  display: none;
+}
+.experience-title{
+ padding: inherit;
+}
+.section-experience {
+    padding-right: initial;
+}
 }
 </style>
 

@@ -1,16 +1,16 @@
-const contatos = [
+const contact = [
     {
-        midiaSocial: '/rosines-almeida',
+        socialMedia: '/rosines-almeida',
         link: 'https://www.linkedin.com/in/rosines-almeida/',
         icon: 'icon ic_linkedin',
     },
     {
-        midiaSocial: 'rosines.almeida@gmail.com',
+        socialMedia: 'rosines.almeida@gmail.com',
         link: 'mailto:rosines.almeida@gmail.com',
         icon: 'icon ic_email',
     },
     {
-        midiaSocial: '/Rosines-Almeida',
+        socialMedia: '/Rosines-Almeida',
         link: 'https://github.com/Rosines-Almeida',
         icon: 'icon ic_gitHub',
     },
@@ -20,20 +20,19 @@ const contatos = [
 const experiences = [
     {
         year: '2022',
-        description: 'Atuo no projeto novas implemantações e melhorias',
+        description: 'Sou desenvolvedora de  novas funcionalidades de uma aplicação  financeira. <br>Trabalho com metodologia ágil, mantendo foco nas entregas e buscando soluções em equipe.',
         title: 'Analista de desenvolvimento  Front-end Pleno',
-        skills: ['TypeScript', 'VueJS', 'SCSS']
+        skills: ['TypeScript', 'VueJS', 'SCSS', 'HTML']
     },
     {
         year: '2021',
-        description: 'Atei no projeto com melhorias e nova simplemantações atuando com typescriprt, vue, scss, html',
+        description: 'Trabalhei em uma aplicação já existente na correção de erros e em processos de melhorias e otimização.<br>Desenvolvi competências de análise de código e capacidade de solucionar problemas.',
         title: 'Analista de desenvolvimento  Front-end Junior',
-        skills: ['VueJS', 'SCSS', 'TypeScript']
+        skills: ['AngularJs', 'CSS', 'HTML', 'JavaScripit']
     },
 ]
 const formation = [
     {
-
         grade: 'Bootcamp',
         formation: 'Desenvolvimento Front End',
         institution: 'Laboratória'
@@ -103,4 +102,4 @@ const projetos = [
     },
 
 ]
-export default { contatos, experiences, formation, certification, courses, projetos };
+export default { contact, experiences, formation, certification, courses, projetos };

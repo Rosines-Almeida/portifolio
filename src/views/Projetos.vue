@@ -6,7 +6,7 @@
         <div class="introduce-description">Conheça meus projetos pessoais.</div>
         <p>
           Desenvolvidos para treinar minhas habilidades em diversas tecnologias front-end.
-          <br />E veja mais no gitHub
+          <br />E veja mais no <a class="introduce-link" href="https://github.com/Rosines-Almeida"> gitHub  </a>
           <span>
             <a href="https://github.com/Rosines-Almeida" target="_blank"
               ><i class="contato icon ic_gitHub"> </i>
@@ -63,7 +63,9 @@
             <img src="../assets/projeto_quiz.gif" />
           </div>
           <div class="box-projeto-description">
-            <div class="projeto-link"> <a :href="projetos[2].link" target="_blank">{{ formatLink(projetos[2].link) }} </a> </div>
+            <div class="projeto-link"> 
+              <a :href="projetos[2].link" target="_blank">{{ formatLink(projetos[2].link) }} </a> 
+              </div>
             <div class="projeto-skills">
               <div
                 v-for="(skill, index) in projetos[2].skills"
@@ -103,6 +105,10 @@
   margin-top: 25px;
 }
 
+.introduce-link{
+  color: white;
+}
+
 .projeto-introduce p {
   font-size: 1.125em;
   margin-top: 45px;
@@ -123,7 +129,7 @@
 
 .box-projetos {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 30px;
   margin-top: 30px;
   flex-direction: column;
@@ -144,7 +150,7 @@
 
 .box-projetos-shadow {
   box-shadow: 0px 10px 11px rgb(0 0 0 / 25%);
-  height: 289px;
+  height: auto;
   border-radius: 0px 0px 6px 6px;
   width: 100%;
 }
@@ -152,11 +158,10 @@
 .box-projeto-description {
   display: flex;
   flex-wrap: wrap;
-  height: 70px;
+  height: auto;
   background-color: white;
   border-radius: 0px 0px 6px 6px;
   width: 100%;
-  flex-direction: column;
 }
 
 .projeto-link {
@@ -164,6 +169,8 @@
   font-size: 1em;
   color: #131212;
   display: inline-block;
+  margin-top: 10px;
+
 }
 
 .projeto-skills {
@@ -172,17 +179,17 @@
   margin: auto auto;
   width: 100%;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .skill {
   background-color: #58c3ff;
-  width: 15%;
   font-size: 0.625em;
   text-align: center;
   border-radius: 7px;
   color: white;
   align-self: center;
-  padding: 3px;
+  padding: 3px 6px;
 }
 
 .icon {

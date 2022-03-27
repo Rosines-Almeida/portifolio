@@ -1,16 +1,35 @@
 <template>
-  <div class="container-rota-home">
-    <div class="section-description">
-
-      <div class="img">
-        <div class="home-description">  Oi, sou a Rosinês </div>
-          <div class="home-about"> Analista de desenvolvimento<br> Front-End </div> 
-          <div class="home-description-UF">São Paulo, SP</div>
-      </div>
-    
+  <div>
+    <div class="container-rota-home">
+      <div class="photo"></div>
     </div>
-    <div class="section-img">
-      <div class="home-photo"></div>
+    <div class="home bg-dots">
+      <div class="section-description">
+        <div class="img">
+          <div class="home-description">Oi, sou a Rosinês</div>
+          <div class="home-about">Analista de desenvolvimento <br>Front-End</div>
+          <div class="home-description-UF">São Paulo, SP</div>
+        </div>
+      </div>
+
+      <div class="section-apresentation">
+        <div class="apresentation-description">
+          <div>
+            Desenvoldevdora Front-End com experiência em <br />
+            JavaScript, HTML, CSS, SASS, AngularJs, VUE, TypeScript 
+          </div>
+          <div class="home-link">
+            Conheça um pouco mais do meu perfil com meus  <br />
+            <router-link to="/projetos" class="a menu home-link-route">
+              projetos pessoais </router-link
+            ><br /> e com minha 
+            <router-link to="/cursos" class="a menu home-link-route">
+              experiencia profissional, cursos e certificações </router-link
+            >.<br />
+            
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -29,142 +48,114 @@ export default {
     rgba(111, 148, 169, 1) 24%,
     rgba(0, 255, 209, 1) 100%
   );
-  margin: 0px;
-  padding: 0px;
+  height: 150px;
+  margin: 0px 20px 0px 20px;
+}
+.photo {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  left: 17%;
+  position: absolute;
+  margin-top: 5%;
+}
+
+.home {
   display: flex;
+  margin: 0px 20px 0px 20px;
+  align-items: center;
+  padding-bottom: 13%;
+}
+
+.home-link{
+  margin-top: 15px;
+}
+
+.home-link-route{
+  text-decoration: underline;
+  font-weight: bold;
+
+}
+
+.apresentation-description {
+  padding-right: 40px;
+  text-align: center;
+  color: #867c7c;
+}
+
+.home-description {
+  font-size: 24px;
+  margin-top: 15px;
+}
+.home-description-UF {
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.home-about {
+  font-size: 20px;
+  margin-top: 15px;
 }
 
 .section-description {
   width: 50%;
-  padding: 125px;
+  margin: 20px 20px 20px 83px;
 }
 
-.section-img {
+.section-apresentation {
   width: 50%;
+  padding: 20px;
 }
 
-.home-photo {
-  background-color: grey;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  margin-top: 150px;
-}
- 
-/* .img {
-  background-image: url("../assets/bg_home.svg");
-  background-repeat: no-repeat;
-  height: 200px;
-} */
-
-.img{ 
+.img {
   width: 60%;
-  height: auto; 
-  background:
-    linear-gradient(to right, black 4px, transparent 4px) 0 0,
-    linear-gradient(to right, black 4px, transparent 4px) 0 100%,
-    linear-gradient(to left, black 4px, transparent 4px) 100% 0,
-    linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
-    linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
-    linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
-    linear-gradient(to top, black 4px, transparent 4px) 0 100%,
-    linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+  height: auto;
+  background: linear-gradient(to right, #9b9a9a 4px, transparent 4px) 0 0,
+    linear-gradient(to right, #9b9a9a 4px, transparent 4px) 0 100%,
+    linear-gradient(to left, #9b9a9a 4px, transparent 4px) 100% 0,
+    linear-gradient(to left, #9b9a9a 4px, transparent 4px) 100% 100%,
+    linear-gradient(to bottom, #9b9a9a 4px, transparent 4px) 0 0,
+    linear-gradient(to bottom, #9b9a9a 4px, transparent 4px) 100% 0,
+    linear-gradient(to top, #9b9a9a 4px, transparent 4px) 0 100%,
+    linear-gradient(to top, #9b9a9a 4px, transparent 4px) 100% 100%;
 
   background-repeat: no-repeat;
   background-size: 15% 22%;
- padding: 43px 23px 23px 41px;
+  padding: 43px 23px 23px 41px;
+  margin-top: 30px;
 }
 
-.home-description {
-  font-size: 26px;
-  font-weight: bold;
-  color: #ffffff !important;
-  /* padding: 30px 0px 0px 60px; */
-}
-
-.home-about{
-    font-size: 16px;
-  font-weight: bold;
-  color: #ffffff !important;
-   /* padding: 30px 0px 0px 60px; */
-}
-
-.home-description-UF {
-  font-size: 14px;
-  /* padding: 0px 60px; */
-  color: #ffffff !important;
-}
-
-@media screen and (max-width: 1202px) {
-  /* .img {
-    background-image: url("../assets/home_media.svg");
-  } */
-  .home-description {
-    font-size: 17px;
-  }
-  .home-about{
- font-size: 14px;
-  }
+@media screen and (max-width: 1022px) {
   .container-rota-home {
-    padding-right: 0px;
+    display: flex;
+    justify-content: center;
   }
-}
-
-@media screen and (max-width: 850px) {
-  /* .img {
-    background-image: url("../assets/bg_home_3.svg");
-  } */
-  .home-description {
-    font-size: 14px;
-   
-  }
-  .home-about{
- font-size: 14px;
-   
-  }
-  .container-rota-home {
-    /* //#6f94a9  #22c1c3 */
-    /* flex-direction: column; */
-    background: rgb(111, 148, 169);
-    background: linear-gradient(
-      0deg, 
-      rgba(34, 193, 195, 1) 100%,
-        rgba(111, 148, 169, 1) 0%
-    );
-  }
-}
-
-@media screen and (max-width: 692px) {
-   .container-rota-home {
-   flex-direction: column;
-}
-.section-img{
-  order: 1;
-  align-self: center;
-   width: 100px;
-    height: 100px;
-}
-.section-description{
-  order: 2;
-}
-.home-photo{
-    margin-top: 20%;
-  align-self: center;
-  width: 100px;
-    height: 100px;
-}
-.section-description{
-  padding: 0;
-  align-self: center;
-}
-}
-
-/* @media screen and (max-width:468px) {
-  .img {
-    display: none;
-  }
-  .with-out-img{
+  .home {
+    flex-direction: column;
     display: block;
   }
-} */
+  .photo {
+    left: auto;
+  }
+  .section-description {
+    text-align: center;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+  }
+  .img {
+    width: 50%;
+    word-wrap:break-word;
+  }
+  .section-apresentation {
+    text-align: center;
+    width: auto;
+    margin-top: 10%;
+  }
+  .apresentation-description {
+    padding: 0px;
+  }
+}
 </style>

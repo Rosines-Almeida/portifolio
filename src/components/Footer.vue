@@ -1,34 +1,38 @@
 <template>
-    <footer>
-      <ul v-for="(contato, index) in contatos"
-        v-bind:key="index" class="contato-links"> 
-          <li class="contato">  
-             <i :class="contato.icon"> <a :href="contato.link" target="_blank"></a> </i>
-        </li> 
-      </ul>
-    </footer>
+  <footer>
+    <ul
+      v-for="(contact, index) in contacts"
+      v-bind:key="index"
+      class="contact-links"
+    >
+      <li class="contact">
+        <i :class="contact.icon">
+          <a :href="contact.link" target="_blank"></a>
+        </i>
+      </li>
+    </ul>
+  </footer>
 </template>
 
 <script>
 export default {
-  name: "Footer"
+  name: "Footer",
 };
 </script>
 
-<style scoped> 
-
-footer {  
+<style scoped>
+footer {
   display: flex;
-  justify-content: end; 
-  background-color: #575454;
-  width: 100%;
-height: 100px; 
-bottom: 0;
-left: 0;     
-} 
+  justify-content: end;
+  background-color: #505659;
+  width: 100%; 
+  bottom: 0;
+  left: 0;
+  padding: 10px 0 5px 0;
+}
 
-ul{
- align-self: center;
+ul {
+  align-self: center;
 }
 
 ul li {
@@ -41,10 +45,10 @@ li a {
 }
 
 .icon {
-  background-repeat: no-repeat; 
-    height: 33px;
-    width: 32px; 
-   margin: 0px 10px 0px 0px
+  background-repeat: no-repeat;
+  height: 33px;
+  width: 32px;
+  margin: 0px 10px 0px 0px;
 }
 
 .ic_linkedin {
@@ -59,28 +63,19 @@ li a {
   background-image: url("../assets/003-github.png");
 }
 
-.contato {
+.contact {
   display: flex;
   padding: 0 10px;
 }
 
-/* @media  (min-width:745px)  and (max-width: 1022px) {
- footer {
-   width: 107%;
-   background-color: red
-  }
-} */
-  
 </style>
 
 <script>
 import data from "@/mixins/data.js";
 
 export default {
- 
-  created() { 
-    this.contatos = data.contatos;
+  created() {
+    this.contacts = data.contact;
   },
 };
-
 </script>

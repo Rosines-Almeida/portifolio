@@ -1,20 +1,19 @@
 <template>
-  <div class="container-contato">
-    <div class="contato-imagem">
-      <img src="../assets/contato.png" alt="lanpada"/>
+  <div class="container-contact bg-dots">
+    <div class="contact-image">
+      <img src="../assets/contato.png" alt="lanpada" />
     </div>
-
-    <div class="contato-links">
+    <div class="contact-links">
       <div
         class="box-contatos"
-        v-for="(contato, index) in contatos"
+        v-for="(contact, index) in contacts"
         v-bind:key="index"
       >
-        <div class="contato">
-          <i :class="contato.icon"> </i>
-          <div class="contato-link">
-            <a :href="contato.link" target="_blank"
-              >{{ contato.midiaSocial }}
+        <div class="contact">
+          <i :class="contact.icon"> </i>
+          <div class="contact-link">
+            <a :href="contact.link" target="_blank"
+              >{{ contact.socialMedia }}
             </a>
           </div>
         </div>
@@ -24,71 +23,66 @@
 </template>
 
 <style scoped>
-.container-contato {
+.container-contact {
   margin: 0px;
   padding: 0 20px;
   display: flex;
 }
 
-.contato-imagem {
- 
+.contact-image {
+  padding: 5%;
   background: #6f94a9;
-  width: 50%;
-  /* min-height: 100vh; */
 }
 
 img {
-  margin: 10px 50px ;
-  /* width: 84%; */
+  margin: 10px 50px;
 }
 
-.contato-links {
- margin: 120px 90px;
+.contact-links {
+  margin: 120px 90px;
 }
 
-.contato {
+.contact {
   display: flex;
 }
 
- 
-.contato div {
-  font-size: 1em;
+.contact div {
+  font-size: 1.2em;
   line-height: 60px;
   font-weight: 100;
 }
 
 .icon {
   background-repeat: no-repeat;
-  height: 27px;
-  width: 27px;
+  height: 32x;
+  width: 32px;
   margin: 16px 10px 0px 0px;
 }
 
 .ic_linkedin {
-  background-image: url("../assets/ic_linkedin.png");
+  background-image: url("../assets/ic_linkedin_004.png");
 }
 
 .ic_email {
   background-image: url("../assets/ic_email.svg");
 }
 
-
 .ic_gitHub {
   background-image: url("../assets/ic_gitHub.svg");
 }
 
 @media screen and (max-width: 1022px) {
-  img{
-width: 80%;
+  img {
+    width: 80%;
   }
-  }
+}
 
 @media screen and (max-width: 745px) {
-  .contato-imagem{
+  .contact-image {
     display: none;
   }
- .contato-links{
-    background-image:   url("../assets/contato.png");
+  .contact-links {
+    background-image: url("../assets/contato.png");
     mix-blend-mode: color-burn;
     width: 100%;
     min-height: 390px;
@@ -100,22 +94,20 @@ width: 80%;
     justify-content: center;
     align-items: center;
     background-position: center;
- }
- a{
-  color: black;
-    font-weight: 550;
- }
   }
+  a {
+    color: black;
+    font-weight: 550;
+  }
+}
 </style>
 
 <script>
 import data from "@/mixins/data.js";
 
 export default {
- 
-  created() { 
-    this.contatos = data.contatos;
+  created() {
+    this.contacts = data.contact;
   },
 };
-
 </script>
