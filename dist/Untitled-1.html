@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portifólio</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but portifólio doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+      console.log('yest')
+      const instalmentResponse = {
+   cdPercentEntry:'1',
+  instalments: [
+    {
+                        "cdIndOffer": "3000460CA007053",
+                        "formPayment": "CA",
+                        "paymentTerm": "53",
+                        "valuePayment": "1037.33",
+                        "cetAnual": "14.41",
+                        "cetMensal": "1.12",
+                        "prioCondition": "0",
+                        "datePaymentEntry": "2022-03-23",
+                        "valueTotalOffer": "55565.09",
+                        "valueGca": "0.0",
+                        "valueCommission": "300.0",
+                        "valueSpentCharge": "300.0",
+                        "persShortageDate": "2022-05-17",
+                        "installmentPlan": "53",
+                        "cdPercenEntry": "1"
+                    },
+                    {
+                        "cdIndOffer": "3000460CA007054",
+                        "formPayment": "CA",
+                        "paymentTerm": "54",
+                        "valuePayment": "1022.83",
+                        "cetAnual": "14.39",
+                        "cetMensal": "1.12",
+                        "prioCondition": "1",
+                        "datePaymentEntry": "2022-03-23",
+                        "valueTotalOffer": "55819.42",
+                        "valueGca": "0.0",
+                        "valueCommission": "300.0",
+                        "valueSpentCharge": "300.0",
+                        "persShortageDate": "2022-05-17",
+                        "installmentPlan": "54",
+                        "cdPercenEntry": "1"
+                    },
+                    {
+                        "cdIndOffer": "3000460CA007055",
+                        "formPayment": "CA",
+                        "paymentTerm": "55",
+                        "valuePayment": "1008.86",
+                        "cetAnual": "14.36",
+                        "cetMensal": "1.12",
+                        "prioCondition": "2",
+                        "datePaymentEntry": "2022-03-23",
+                        "valueTotalOffer": "56073.9",
+                        "valueGca": "0.0",
+                        "valueCommission": "300.0",
+                        "valueSpentCharge": "300.0",
+                        "persShortageDate": "2022-05-17",
+                        "installmentPlan": "55",
+                        "cdPercenEntry": "1"
+                    }, 
+                    {
+                        "cdIndOffer": "3000460CA007057",
+                        "formPayment": "CA",
+                        "paymentTerm": "56",
+                        "valuePayment": "982.43",
+                        "cetAnual": "14.32",
+                        "cetMensal": "1.12",
+                        "prioCondition": "4",
+                        "datePaymentEntry": "2022-03-23",
+                        "valueTotalOffer": "56585.11",
+                        "valueGca": "0.0",
+                        "valueCommission": "300.0",
+                        "valueSpentCharge": "300.0",
+                        "persShortageDate": "2022-05-17",
+                        "installmentPlan": "56",
+                        "cdPercenEntry": "1"
+                    }, 
+                    {
+                        "cdIndOffer": "3000460CA007059",
+                        "formPayment": "CA",
+                        "paymentTerm": "57",
+                        "valuePayment": "957.84",
+                        "cetAnual": "14.28",
+                        "cetMensal": "1.11",
+                        "prioCondition": "6",
+                        "datePaymentEntry": "2022-03-23",
+                        "valueTotalOffer": "57099.159999999996",
+                        "valueGca": "0.0",
+                        "valueCommission": "300.0",
+                        "valueSpentCharge": "300.0",
+                        "persShortageDate": "2022-05-17",
+                        "installmentPlan": "57",
+                        "cdPercenEntry": "1"
+                    }, 
+                    {
+                        "cdIndOffer": "3000460CA007061",
+                        "formPayment": "CA",
+                        "paymentTerm": "58",
+                        "valuePayment": "934.9",
+                        "cetAnual": "14.24",
+                        "cetMensal": "1.11",
+                        "prioCondition": "8",
+                        "datePaymentEntry": "2022-03-23",
+                        "valueTotalOffer": "57615.5",
+                        "valueGca": "0.0",
+                        "valueCommission": "300.0",
+                        "valueSpentCharge": "300.0",
+                        "persShortageDate": "2022-05-17",
+                        "installmentPlan": "58",
+                        "cdPercenEntry": "1"
+                    },
+                    
+  ]
+}
+                      
+// console.log(instalmentResponse)
+
+function getNextInstalment(){
+  let plan = 52
+  let result = 1;
+  return instalmentResponse.instalments.find((i) =>{
+    if(i.installmentPlan == plan){
+      result =  i
+    } else{
+      plan++
+    }
+  })
+return result
+ }
+
+ console.log(getNextInstalment())
+  </script>
+</html>
