@@ -76,7 +76,6 @@ a:hover{
  text-decoration: underline;
 }
  
- 
 @media screen and (max-width: 400px) {
   .conteudo {
     display: block;

@@ -61,8 +61,8 @@
         >
           <div class="container-education-box">
             <p></p>
-            <a class="courses-link  certification-link" :href="item.link" target="_blank">
-              <p class="certification-link" v-html="item.formation"></p>
+            <a :href="item.link" target="_blank" class="projeto-link">
+              <p class="certification-link courses-link " v-html="item.formation"></p>
             </a>
             <p>{{ item.institution }}</p>
           </div>
@@ -83,7 +83,7 @@
               <div class="continue-education-certification">
                 <div>
                   <a  
-                  class="courses-link "
+                  class="courses-link projeto-link"
                   :href="course.link" target="_blank">{{
                     course.formation
                   }}</a>
@@ -188,6 +188,7 @@ display: flex;
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
+  justify-content: center;
 }
 
 .skill {
@@ -247,12 +248,15 @@ hr {
 }
 
 .courses-link {
-  color: #867c7c; 
+  color: #6f94a9 !important; 
   text-decoration: underline;
 }
 
 .continue-education-institution {
   color: #867c7c;
+}
+ a:hover{
+  color: blue !important;
 }
 
 .container-education {
@@ -344,6 +348,9 @@ hr {
   }
   .experience-box-flex{
     flex-direction: column;
+  }
+  .experience-box-description{
+    text-align: center;
   }
 }
 

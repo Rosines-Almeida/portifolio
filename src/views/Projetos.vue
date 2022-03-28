@@ -5,8 +5,12 @@
         <div class="introduce-title">Projetos</div>
         <div class="introduce-description">Conheça meus projetos pessoais.</div>
         <p>
-          Desenvolvidos para treinar minhas habilidades em diversas tecnologias front-end.
-          <br />E veja mais no <a class="introduce-link" href="https://github.com/Rosines-Almeida"> gitHub  </a>
+          Desenvolvidos para treinar minhas habilidades em diversas tecnologias
+          front-end.
+          <br />E veja mais no
+          <a class="introduce-link" href="https://github.com/Rosines-Almeida">
+            gitHub
+          </a>
           <span>
             <a href="https://github.com/Rosines-Almeida" target="_blank"
               ><i class="contato icon ic_gitHub"> </i>
@@ -16,14 +20,18 @@
       </div>
     </div>
 
-    <div class="bg-dots"> 
+    <div class="bg-dots">
       <div class="box-projetos">
         <div class="box-projetos-shadow">
           <div class="projeto-gift">
             <img src="../assets/projeto_dog.gif" />
           </div>
           <div class="box-projeto-description">
-            <div class="projeto-link"> <a :href="projetos[0].link" target="_blank">{{ formatLink(projetos[0].link) }} </a></div>
+            <div class="projeto-link">
+              <a class="projeto-link" :href="projetos[0].link" target="_blank"
+                >{{ formatLink(projetos[0].link) }}
+              </a>
+            </div>
             <div class="projeto-skills">
               <div
                 v-for="(skill, index) in projetos[0].skills"
@@ -43,7 +51,11 @@
             <img src="../assets/projeto_tecno.gif" />
           </div>
           <div class="box-projeto-description">
-            <div class="projeto-link"> <a :href="projetos[1].link" target="_blank">{{ formatLink(projetos[1].link) }} </a></div>
+            <div class="projeto-link">
+              <a class="projeto-link" :href="projetos[1].link" target="_blank"
+                >{{ formatLink(projetos[1].link) }}
+              </a>
+            </div>
             <div class="projeto-skills">
               <div
                 v-for="(skill, index) in projetos[1].skills"
@@ -63,9 +75,11 @@
             <img src="../assets/projeto_quiz.gif" />
           </div>
           <div class="box-projeto-description">
-            <div class="projeto-link"> 
-              <a :href="projetos[2].link" target="_blank">{{ formatLink(projetos[2].link) }} </a> 
-              </div>
+            <div class="projeto-link">
+              <a class="projeto-link" :href="projetos[2].link" target="_blank"
+                >{{ formatLink(projetos[2].link) }}
+              </a>
+            </div>
             <div class="projeto-skills">
               <div
                 v-for="(skill, index) in projetos[2].skills"
@@ -83,13 +97,12 @@
 </template>
 
 <style scoped>
-
-
 .container-projeto {
   margin: 0px;
   padding: 0px;
   display: flex;
 }
+
 .projeto-introduce {
   color: white;
   text-align: center;
@@ -105,8 +118,9 @@
   margin-top: 25px;
 }
 
-.introduce-link{
+.introduce-link {
   color: white !important;
+  font-weight: 400;
 }
 
 .projeto-introduce p {
@@ -169,8 +183,9 @@
   color: #6f94a9 !important;
   display: inline-block;
   margin-top: 15px;
-    text-decoration: underline;
-    margin-bottom: 10px;  
+  text-decoration: underline;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .projeto-skills {
@@ -187,9 +202,10 @@
   font-size: 0.625em;
   text-align: center;
   border-radius: 7px;
-  color: white;
+  color: white !important;
   align-self: center;
   padding: 3px 6px;
+  font-weight: bold;
 }
 
 .icon {
@@ -221,7 +237,7 @@ img {
 @media screen and (max-width: 1022px) {
   .container-projeto {
     flex-direction: column;
-        margin: 0 20px;
+    margin: 0 20px;
   }
 
   .projeto-background {
@@ -260,7 +276,6 @@ img {
   .projeto-introduce p {
     margin: 0;
   }
-
 }
 </style>
 

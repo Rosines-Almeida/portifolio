@@ -11,12 +11,11 @@
           <div class="home-description-UF">São Paulo, SP</div>
         </div>
       </div>
-
       <div class="section-apresentation">
         <div class="apresentation-description">
           <div>
             Desenvoldevdora Front-End com experiência em <br />
-            JavaScript, HTML, CSS, SASS, AngularJs, VUE, TypeScript 
+            JavaScript, HTML, CSS, SASS, AngularJs, VUE, TypeScript.
           </div>
           <div class="home-link">
             Conheça um pouco mais do meu perfil com meus  <br />
@@ -24,9 +23,8 @@
               projetos pessoais </router-link
             ><br /> e com minha 
             <router-link to="/cursos" class="home-link-route">
-              experiência profissional, cursos e certificações </router-link
+              experiência profissional, cursos e certificações</router-link
             >.<br />
-            
           </div>
         </div>
       </div>
@@ -51,6 +49,7 @@ export default {
   height: 150px;
   margin: 0px 20px 0px 20px;
 }
+
 .photo {
   height: 165px;
   width: 165px;
@@ -119,7 +118,6 @@ export default {
     linear-gradient(to bottom, #9b9a9a 4px, transparent 4px) 100% 0,
     linear-gradient(to top, #9b9a9a 4px, transparent 4px) 0 100%,
     linear-gradient(to top, #9b9a9a 4px, transparent 4px) 100% 100%;
-
   background-repeat: no-repeat;
   background-size: 15% 22%;
   padding: 43px 23px 23px 41px;

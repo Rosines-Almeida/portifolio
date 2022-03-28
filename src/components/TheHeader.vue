@@ -1,11 +1,17 @@
 <template>
-  <header> 
-    <nav class="topnav"> 
-       <router-link to="/"><div @click="closeMenu()" class="logo icon-home"></div></router-link>
-      <div id="myLinks"  @click="closeMenu()">
-        <router-link to="/projetos" class="a menu bold"  @click="closeMenu()">Projetos</router-link>
-        <router-link to="/cursos" class="a menu bold">Experiência e Cursos</router-link>
-        <router-link to="/contato"  class="a menu bold">Contatos</router-link>
+  <header>
+    <nav class="topnav">
+      <router-link to="/"
+        ><div @click="closeMenu()" class="logo icon-home"></div
+      ></router-link>
+      <div id="myLinks" @click="closeMenu()">
+        <router-link to="/projetos" class="a menu" @click="closeMenu()"
+          >Projetos</router-link
+        >
+        <router-link to="/cursos" class="a menu"
+          >Experiência e Cursos</router-link
+        >
+        <router-link to="/contato" class="a menu">Contatos</router-link>
       </div>
       <a href="javascript:void(0);" class="icon" @click="openMenu()">
         <i class="fa fa-bars"></i>
@@ -18,7 +24,7 @@
 export default {
   name: "TheHeader",
   methods: {
-    openMenu: function () { 
+    openMenu: function () {
       var x = document.getElementById("myLinks");
       if (x.style.display === "block") {
         x.style.display = "none";
@@ -26,13 +32,14 @@ export default {
         x.style.display = "block";
       }
     },
-    closeMenu: function(){ 
+    closeMenu: function () {
+      console.log("close");
       let width = screen.width;
-      if(width <= 1022  ){
-       var x = document.getElementById("myLinks");
-       x.style.display = "none";
+      if (width <= 1022) {
+        var x = document.getElementById("myLinks");
+        x.style.display = "none";
       }
-    }
+    },
   },
 };
 </script>
@@ -45,27 +52,27 @@ header {
 header a {
   color: #131212;
 }
-.menu{
-padding: 0 10px;
-margin-left: 10px;
+.menu {
+  padding: 0 10px;
+  margin-left: 10px;
 }
 
 a.router-link-active {
-   color: #6f94a9;
+  color: #6f94a9;
 }
 
 nav {
-  /* max-width: 800px; */
   margin: 0 auto;
   display: flex;
   align-content: space-between;
-  align-items: center; 
+  align-items: center;
   padding: 20px 50px 20px 20px;
 }
 
-a.router-link-active{
+a.router-link-active {
   flex: 1;
 }
+
 .icon-home {
   background-image: url("../assets/home.svg");
   background-repeat: no-repeat;
@@ -77,32 +84,34 @@ a.router-link-active{
   font-size: 1.3rem;
   color: white;
 }
+
 .topnav #myLinks {
-    display: block;
-  }
-.topnav #myLinks.a{
-  display: inline-block;
- padding: 0 10px;
-    margin-left: 10px;
+  display: block;
 }
-/* 
-li a {
+
+.topnav #myLinks.a {
+  display: inline-block;
   padding: 0 10px;
   margin-left: 10px;
-} */
+  font-weight: 100 !important;
+}
+
+a {
+  font-weight: 100 !important;
+}
+
 @media screen and (min-width: 1022px) {
-  .icon{
+  .icon {
     display: none;
   }
-    .topnav #myLinks {
+  .topnav #myLinks {
     display: block;
   }
-   
 }
+
 @media screen and (max-width: 1022px) {
   .topnav {
     overflow: hidden;
-    /* background-color: #333; */
     position: relative;
   }
 
@@ -119,13 +128,13 @@ li a {
   }
 
   .topnav a.icon {
-       color: black;
+    color: black;
     display: block;
-    /* position: absolute; */
     right: 0;
     top: 0;
     background-color: #ddd;
   }
+
   .myLinks a {
     background: white;
     display: block;
@@ -133,18 +142,12 @@ li a {
     right: 0;
     top: 0;
   }
-  .topnav a{
-    /* background-color: #ddd; */
+
+  .topnav a {
     color: #131212;
-        padding: 9px;
-   
+    padding: 9px;
     font-size: 12px;
   }
-
-  /* .topnav a:hover {
-    background-color: #ddd;
-    color: #131212;
-  } */
 
   .active {
     background-color: #04aa6d;

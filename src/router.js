@@ -3,8 +3,6 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Contato from './views/Contato.vue'
 import Cursos from './views/Cursos.vue'
-import Curso from './views/Curso.vue'
-import Aula from './views/Aula.vue'
 import Projetos from './views/Projetos.vue'
 
 Vue.use(Router)
