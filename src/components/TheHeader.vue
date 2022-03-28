@@ -1,12 +1,11 @@
 <template>
   <header> 
-    <nav class="topnav">
-      <!-- <a href="#home" class="active">Logo</a> -->
-       <router-link to="/"><div class="logo icon-home"></div></router-link>
+    <nav class="topnav"> 
+       <router-link to="/"><div @click="closeMenu()" class="logo icon-home"></div></router-link>
       <div id="myLinks"  @click="closeMenu()">
-        <router-link to="/projetos" class="a menu"  @click="closeMenu()">Projetos</router-link>
-        <router-link to="/cursos" class="a menu">Experiência e Cursos</router-link>
-        <router-link to="/contato"  class="a menu">Contatos</router-link>
+        <router-link to="/projetos" class="a menu bold"  @click="closeMenu()">Projetos</router-link>
+        <router-link to="/cursos" class="a menu bold">Experiência e Cursos</router-link>
+        <router-link to="/contato"  class="a menu bold">Contatos</router-link>
       </div>
       <a href="javascript:void(0);" class="icon" @click="openMenu()">
         <i class="fa fa-bars"></i>
@@ -44,15 +43,15 @@ header {
 }
 
 header a {
-  color: #575454;
+  color: #131212;
 }
 .menu{
 padding: 0 10px;
-    margin-left: 10px;
+margin-left: 10px;
 }
 
 a.router-link-active {
-  color: #6f94a9;
+   color: #6f94a9;
 }
 
 nav {
@@ -60,8 +59,8 @@ nav {
   margin: 0 auto;
   display: flex;
   align-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
+  align-items: center; 
+  padding: 20px 50px 20px 20px;
 }
 
 a.router-link-active{
@@ -112,7 +111,7 @@ li a {
   }
 
   .topnav a {
-    color: #ddd;
+    color: #131212;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;

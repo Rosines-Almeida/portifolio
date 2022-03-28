@@ -19,13 +19,13 @@ const contact = [
 
 const experiences = [
     {
-        year: '2022',
+        year: '2021',
         description: 'Sou desenvolvedora de  novas funcionalidades de uma aplicação  financeira. <br>Trabalho com metodologia ágil, mantendo foco nas entregas e buscando soluções em equipe.',
         title: 'Analista de desenvolvimento  Front-end Pleno',
         skills: ['TypeScript', 'VueJS', 'SCSS', 'HTML']
     },
     {
-        year: '2021',
+        year: '2019',
         description: 'Trabalhei em uma aplicação já existente na correção de erros e em processos de melhorias e otimização.<br>Desenvolvi competências de análise de código e capacidade de solucionar problemas.',
         title: 'Analista de desenvolvimento  Front-end Junior',
         skills: ['AngularJs', 'CSS', 'HTML', 'JavaScripit']

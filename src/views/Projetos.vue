@@ -106,7 +106,7 @@
 }
 
 .introduce-link{
-  color: white;
+  color: white !important;
 }
 
 .projeto-introduce p {
@@ -129,7 +129,6 @@
 
 .box-projetos {
   display: flex;
-  /* flex-wrap: wrap; */
   gap: 30px;
   margin-top: 30px;
   flex-direction: column;
@@ -167,10 +166,11 @@
 .projeto-link {
   margin: auto auto;
   font-size: 1em;
-  color: #131212;
+  color: #6f94a9 !important;
   display: inline-block;
-  margin-top: 10px;
-
+  margin-top: 15px;
+    text-decoration: underline;
+    margin-bottom: 10px;  
 }
 
 .projeto-skills {
@@ -221,6 +221,7 @@ img {
 @media screen and (max-width: 1022px) {
   .container-projeto {
     flex-direction: column;
+        margin: 0 20px;
   }
 
   .projeto-background {

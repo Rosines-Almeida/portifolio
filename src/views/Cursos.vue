@@ -61,7 +61,7 @@
         >
           <div class="container-education-box">
             <p></p>
-            <a class="certification-link" :href="item.link" target="_blank">
+            <a class="courses-link  certification-link" :href="item.link" target="_blank">
               <p class="certification-link" v-html="item.formation"></p>
             </a>
             <p>{{ item.institution }}</p>
@@ -82,7 +82,9 @@
             <div v-for="(course, index) in courses" :key="index">
               <div class="continue-education-certification">
                 <div>
-                  <a :href="course.link" target="_blank">{{
+                  <a  
+                  class="courses-link "
+                  :href="course.link" target="_blank">{{
                     course.formation
                   }}</a>
                 </div>
@@ -244,9 +246,9 @@ hr {
   align-self: center;
 }
 
-a {
-  font-weight: 100;
-  color: #867c7c;
+.courses-link {
+  color: #867c7c; 
+  text-decoration: underline;
 }
 
 .continue-education-institution {
@@ -339,6 +341,9 @@ a {
   }
   .container-continue-education{
     width: auto;
+  }
+  .experience-box-flex{
+    flex-direction: column;
   }
 }
 

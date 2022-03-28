@@ -20,11 +20,11 @@
           </div>
           <div class="home-link">
             Conheça um pouco mais do meu perfil com meus  <br />
-            <router-link to="/projetos" class="a menu home-link-route">
+            <router-link to="/projetos" class="home-link-route ">
               projetos pessoais </router-link
             ><br /> e com minha 
-            <router-link to="/cursos" class="a menu home-link-route">
-              experiencia profissional, cursos e certificações </router-link
+            <router-link to="/cursos" class="home-link-route">
+              experiência profissional, cursos e certificações </router-link
             >.<br />
             
           </div>
@@ -74,8 +74,8 @@ export default {
 
 .home-link-route{
   text-decoration: underline;
-  font-weight: bold;
-
+  font-weight: bold ;
+  color: #6f94a9;
 }
 
 .apresentation-description {
