@@ -3,7 +3,6 @@
     <TheHeader />
     <router-view class="main"></router-view>
       <Footer /> 
-   
   </div>
 </template>
 

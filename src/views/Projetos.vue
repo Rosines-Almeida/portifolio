@@ -6,7 +6,7 @@
         <div class="introduce-description">Conheça meus projetos pessoais.</div>
         <p>
           Desenvolvidos para treinar minhas habilidades em diversas tecnologias
-          front-end.
+          Front-End.
           <br />E veja mais no
           <a class="introduce-link" href="https://github.com/Rosines-Almeida">
             gitHub

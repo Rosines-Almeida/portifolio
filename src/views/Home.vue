@@ -16,7 +16,7 @@
       <div class="section-apresentation">
         <div class="apresentation-description">
           <div>
-            Desenvoldevdora Front-End com experiência em <br />
+            Desenvolvedora Front-End com experiência em <br />
             JavaScript, HTML, CSS, SASS, AngularJs, VUE, TypeScript.
           </div>
           <div class="home-link">
