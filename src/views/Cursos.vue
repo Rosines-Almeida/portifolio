@@ -324,6 +324,9 @@ hr {
     justify-content: center;
     align-items: center;
   }
+  .education-description{
+    font-size: 1.2em;
+  }
   .education-description-detail {
     display: none;
   }
@@ -354,7 +357,7 @@ hr {
   }
 }
 
-@media screen and (max-width: 384px) {
+@media screen and (max-width: 500px) {
 .d-flex{
   flex-direction: column;
 }
@@ -363,6 +366,7 @@ hr {
 }
 .experience-title{
  padding: inherit;
+ text-align: center;
 }
 .section-experience {
     padding-right: initial;

@@ -271,6 +271,8 @@ img {
 
   .projeto-introduce {
     margin-top: 5%;
+    padding: 0 16px;
+    text-align: center;
   }
 
   .projeto-introduce p {
