@@ -14,7 +14,6 @@ const contact = [
         link: 'https://github.com/Rosines-Almeida',
         icon: 'icon ic_gitHub',
     },
-
 ]
 
 const experiences = [
@@ -31,6 +30,7 @@ const experiences = [
         skills: ['AngularJs', 'CSS', 'HTML', 'JavaScripit']
     },
 ]
+
 const formation = [
     {
         grade: 'Bootcamp',
@@ -100,6 +100,6 @@ const projetos = [
         skills: ['React', 'HTML', 'CSS', 'JavaScript'],
         src: 'projeto_quiz.91a1c48c.gif'
     },
-
 ]
+
 export default { contact, experiences, formation, certification, courses, projetos };

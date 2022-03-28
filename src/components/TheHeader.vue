@@ -120,11 +120,12 @@ a {
   }
 
   .topnav a {
-    color: #131212;
+    color: #131212 !important;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     display: block;
+    font-weight: bold !important;
   }
 
   .topnav a.icon {

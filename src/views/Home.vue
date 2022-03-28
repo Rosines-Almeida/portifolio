@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="container-rota-home">
-      <div class="photo"></div>
+      <div class="photo"> 
+        <img class="photo-perfil" src="../assets/photo_perfil.png" />
+      </div>
     </div>
     <div class="home bg-dots">
       <div class="section-description">
@@ -54,10 +56,16 @@ export default {
   height: 165px;
   width: 165px;
   border-radius: 50%;
-  background-color: aliceblue;
+  background-color: #f5f5f5;
   left: 17%;
   position: absolute;
   margin-top: 5%;
+ 
+}
+
+.photo-perfil{
+    max-width: 100%; 
+    padding: 8px 0px 0px 0px;
 }
 
 .home {
