@@ -31,19 +31,6 @@ export default new Router({
       name: "projetos",
       component: Projetos
     },
-    {
-      path: "/cursos/:curso",
-      name: "curso",
-      component: Curso,
-      props: true,
-      children: [
-        {
-          path: ":aula",
-          name: "aula",
-          component: Aula,
-          props: true,
-        }
-      ]
-    },
+
   ]
 })
