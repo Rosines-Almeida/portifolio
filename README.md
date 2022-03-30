@@ -1,8 +1,8 @@
-# Portifólio
+# Portfólio
 
-<p> Meu portifolio desenvolvido em VueJs <br> 
+<p> Meu portfolio desenvolvido em VueJs <br> 
 Um projeto pessoal, para treinar as habilidades em Vue, e apresentar um pouco da minha experiência proffisional, cursos e certificações. </p> 
-https://portifolio-rosines-almeida.vercel.app/
+https://portfolio-rosines-almeida.vercel.app/
 
 <p> Desenvolvido com layout responsivo </p>
 
