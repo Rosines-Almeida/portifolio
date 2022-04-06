@@ -19,13 +19,13 @@ Desenvolvido com layout responsivo </p>
     <img src="https://user-images.githubusercontent.com/39601714/160675223-5c4a3f28-7100-4050-b3a7-ad3cae8cbd3c.gif" width="150"  />
 </div> 
 
-## Recursos Utilizados
+## Recursos utilizados
 
 * **[Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=vuejsworkshop-github-gllemos)**
 * **[Vue.js](https://vuejs.org/)**
 * **[Vue-CLI](https://cli.vuejs.org/)** 
 
-## Executando Localmente o Projeto
+## Executando localmente o projeto
 ``` bash
 # install dependencies
 npm install
